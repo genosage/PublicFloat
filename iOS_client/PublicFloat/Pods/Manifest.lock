@@ -1,0 +1,52 @@
+PODS:
+  - AFNetworking (2.5.4):
+    - AFNetworking/NSURLConnection (= 2.5.4)
+    - AFNetworking/NSURLSession (= 2.5.4)
+    - AFNetworking/Reachability (= 2.5.4)
+    - AFNetworking/Security (= 2.5.4)
+    - AFNetworking/Serialization (= 2.5.4)
+    - AFNetworking/UIKit (= 2.5.4)
+  - AFNetworking/NSURLConnection (2.5.4):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.5.4):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.5.4)
+  - AFNetworking/Security (2.5.4)
+  - AFNetworking/Serialization (2.5.4)
+  - AFNetworking/UIKit (2.5.4):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - FLKAutoLayout (0.2.1)
+  - Nimble (1.0.0)
+  - ORStackView (2.0.0):
+    - FLKAutoLayout (~> 0.1)
+  - Quick (0.3.1)
+  - RxCocoa (1.9.1):
+    - RxSwift (~> 1.0)
+  - RxSwift (1.9.1)
+  - SwiftyJSON (2.2.1)
+
+DEPENDENCIES:
+  - AFNetworking (~> 2.5)
+  - Nimble (~> 1.0.0)
+  - ORStackView (~> 2.0)
+  - Quick (~> 0.3.0)
+  - RxCocoa
+  - RxSwift
+  - SwiftyJSON (~> 2.1)
+
+SPEC CHECKSUMS:
+  AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
+  FLKAutoLayout: 9db6b30c2008d230da608e62c607b11c23b942e6
+  Nimble: 8bee528e5fcc403653076545db562d2b5db7bb87
+  ORStackView: 5df6b1b990b0648d8ef6f69f89361ea8648e8f64
+  Quick: 824572d3d198d51e52cf4aa722cebf7e59952a35
+  RxCocoa: b6665f77023bbdf428b92aa3338078e1e6bac39a
+  RxSwift: 546de2efb7f97f748f6c637d00846d4dd8600f62
+  SwiftyJSON: ae2d0a3d68025d136602a33c4ee215091ced3e33
+
+COCOAPODS: 0.37.2

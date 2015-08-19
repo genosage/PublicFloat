@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>455F6CA5-C48C-4740-B369-02975CFCB44A</string>
+	<key>IDESourceControlProjectName</key>
+	<string>PublicFloat</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B2F7D714ACC6D1F5881BD04FC8EAADDDA0CFB125</key>
+		<string>https://git.eng.unimelb.edu.au/private/SWEN900014/PublicFloat-Yellow.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>iOS_client/PublicFloat/PublicFloat.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B2F7D714ACC6D1F5881BD04FC8EAADDDA0CFB125</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://git.eng.unimelb.edu.au/private/SWEN900014/PublicFloat-Yellow.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B2F7D714ACC6D1F5881BD04FC8EAADDDA0CFB125</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B2F7D714ACC6D1F5881BD04FC8EAADDDA0CFB125</string>
+			<key>IDESourceControlWCCName</key>
+			<string>PublicFloat-Yellow</string>
+		</dict>
+	</array>
+</dict>
+</plist>
