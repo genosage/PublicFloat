@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "03CC46D48F7A78990D3081A2"
+               BlueprintIdentifier = "B39CAA833E7CC6A8E8755A3D"
                BuildableName = "RxCocoa.framework"
                BlueprintName = "Pods-PublicFloat-RxCocoa"
                ReferencedContainer = "container:Pods.xcodeproj">
