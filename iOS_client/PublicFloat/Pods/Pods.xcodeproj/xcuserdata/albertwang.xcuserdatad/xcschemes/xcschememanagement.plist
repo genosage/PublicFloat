@@ -14,12 +14,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-PublicFloat-FLKAutoLayout.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-PublicFloat-ORStackView.xcscheme</key>
+		<key>Pods-PublicFloat-ObjectMapper.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

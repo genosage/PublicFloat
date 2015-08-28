@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>EC04B185-D2FA-4D5B-9DD0-AEF6A5456CDD</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>PublicFloat</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>B2F7D714ACC6D1F5881BD04FC8EAADDDA0CFB125</key>
 		<string>https://git.eng.unimelb.edu.au/private/SWEN900014/PublicFloat-Yellow.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>iOS_client/PublicFloat/PublicFloat.xcodeproj/project.xcworkspace</string>
+	<string>iOS_client/PublicFloat/PublicFloat.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>B2F7D714ACC6D1F5881BD04FC8EAADDDA0CFB125</key>
