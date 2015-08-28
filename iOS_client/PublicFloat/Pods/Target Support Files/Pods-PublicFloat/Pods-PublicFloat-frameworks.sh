@@ -48,17 +48,11 @@ code_sign() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework 'AFNetworking.framework'
-  install_framework 'Alamofire.framework'
-  install_framework 'ObjectMapper.framework'
   install_framework 'RxCocoa.framework'
   install_framework 'RxSwift.framework'
   install_framework 'SwiftyJSON.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework 'AFNetworking.framework'
-  install_framework 'Alamofire.framework'
-  install_framework 'ObjectMapper.framework'
   install_framework 'RxCocoa.framework'
   install_framework 'RxSwift.framework'
   install_framework 'SwiftyJSON.framework'

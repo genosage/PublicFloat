@@ -4,21 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-PublicFloat-AFNetworking.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-PublicFloat-Alamofire.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-PublicFloat-ObjectMapper.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-PublicFloat-RxCocoa.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -44,11 +29,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-PublicFloatTests-OHHTTPStubs.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-PublicFloatTests-Quick.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -61,6 +41,42 @@
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict/>
+	<dict>
+		<key>0C425931239D9E4F786E5BEB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3C1EE19ADC907511FA294287</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>65050E91102E5906D5E4ADA7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B26E80D5C9C861294AF5130F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C19395F69EEBE51A745CD600</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D0C9B2537E3951B71214B1CA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D4724C86563319BD95B35A23</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
 </dict>
 </plist>
