@@ -8,6 +8,9 @@
 
 import UIKit
 import XCTest
+import Kiwi
+import Quick
+import OHHTTPStubs
 
 class PublicFloatTests: XCTestCase {
     

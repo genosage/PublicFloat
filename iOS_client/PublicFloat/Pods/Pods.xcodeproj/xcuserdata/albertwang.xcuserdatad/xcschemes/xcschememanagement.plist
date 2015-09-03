@@ -4,17 +4,32 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-PublicFloat-RxCocoa.xcscheme</key>
+		<key>AFNetworking.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-PublicFloat-RxSwift.xcscheme</key>
+		<key>Alamofire.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-PublicFloat-SwiftyJSON.xcscheme</key>
+		<key>Kiwi.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Nimble.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>OHHTTPStubs.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ObjectMapper.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -24,17 +39,27 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-PublicFloatTests-Nimble.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-PublicFloatTests-Quick.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-PublicFloatTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Quick.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>RxCocoa.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>RxSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SwiftyJSON.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -42,37 +67,62 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0C425931239D9E4F786E5BEB</key>
+		<key>05F4D22D9AC008F58827916356F7BB2C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3C1EE19ADC907511FA294287</key>
+		<key>1B6BE2671180BFF7745006020E20D7BA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>65050E91102E5906D5E4ADA7</key>
+		<key>1DAD1F3139973652922E055F046B88F1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B26E80D5C9C861294AF5130F</key>
+		<key>1EB0FDB73853034DE1A4475FB9F9FEB8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C19395F69EEBE51A745CD600</key>
+		<key>4659AC3B4B204ED164B68110969F6E84</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D0C9B2537E3951B71214B1CA</key>
+		<key>B9A04D3C9B208813656510FDA8ADAE02</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D4724C86563319BD95B35A23</key>
+		<key>BF045B21A0A10BAFBDFC8A4B1B0D13EA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D57A66C26EEDC24FFA06C1646D5B6E00</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DE997C5B643684F63DC53FABF67B5D8D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E46F7A3949A4CB02A0D2EDC3B7CC21AE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E719597897663FE8E43425EBEB2FC931</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F6B670DD183294DE2A4E1FEDD59D7A48</key>
 		<dict>
 			<key>primary</key>
 			<true/>

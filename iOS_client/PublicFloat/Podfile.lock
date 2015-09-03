@@ -21,6 +21,7 @@ PODS:
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - Alamofire (1.3.1)
+  - Kiwi (2.4.0)
   - Nimble (1.0.0)
   - ObjectMapper (0.15)
   - OHHTTPStubs (4.2.0):
@@ -43,10 +44,11 @@ PODS:
   - SwiftyJSON (2.2.1)
 
 DEPENDENCIES:
-  - AFNetworking (~> 2.0)
+  - AFNetworking
   - Alamofire (~> 1.3)
+  - Kiwi
   - Nimble (~> 1.0.0)
-  - ObjectMapper (~> 0.15)
+  - ObjectMapper
   - OHHTTPStubs
   - Quick (~> 0.3.0)
   - RxCocoa
@@ -56,6 +58,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AFNetworking: 79f7eb1a0fcfa7beb409332b2ca49afe9ce53b05
   Alamofire: e4ab637e3195b645c814b87a652373439e59f2a4
+  Kiwi: f49c9d54b28917df5928fe44968a39ed198cb8a8
   Nimble: 8bee528e5fcc403653076545db562d2b5db7bb87
   ObjectMapper: 0656dc1c155825897e5acfcd25362c6b61786dcb
   OHHTTPStubs: f639130b83fb5f4f022d38f841141b0a6fa77249
@@ -64,4 +67,4 @@ SPEC CHECKSUMS:
   RxSwift: 546de2efb7f97f748f6c637d00846d4dd8600f62
   SwiftyJSON: ae2d0a3d68025d136602a33c4ee215091ced3e33
 
-COCOAPODS: 0.37.2
+COCOAPODS: 0.38.2
