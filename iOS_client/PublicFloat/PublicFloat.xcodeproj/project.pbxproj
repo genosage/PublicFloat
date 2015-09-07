@@ -13,6 +13,8 @@
 		18C7F1EA1B84955300D8DF44 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18C7F1E91B84955300D8DF44 /* Images.xcassets */; };
 		18C7F1ED1B84955300D8DF44 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C7F1EB1B84955300D8DF44 /* LaunchScreen.xib */; };
 		18C7F1F91B84955300D8DF44 /* PublicFloatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C7F1F81B84955300D8DF44 /* PublicFloatTests.swift */; };
+		18D6004C1B9DA0F1007EE280 /* HTTPSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D6004B1B9DA0F1007EE280 /* HTTPSessionManager.swift */; };
+		18D6004F1B9DAF3C007EE280 /* ArtWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D6004E1B9DAF3C007EE280 /* ArtWork.swift */; };
 		18F565C61B98768C00A84DFA /* PFServerAPIStubs.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F565C51B98768C00A84DFA /* PFServerAPIStubs.m */; };
 		5FDEC63C480C933430220C6C /* Pods_PublicFloatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A956685C0083C5341E34F55B /* Pods_PublicFloatTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		BA42C625906CF704A66DA16A /* Pods_PublicFloat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40156B90B0C11FB5D2C48859 /* Pods_PublicFloat.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -40,7 +42,11 @@
 		18C7F1F21B84955300D8DF44 /* PublicFloatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PublicFloatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18C7F1F71B84955300D8DF44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18C7F1F81B84955300D8DF44 /* PublicFloatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicFloatTests.swift; sourceTree = "<group>"; };
-		18F565C31B98768C00A84DFA /* PublicFloat-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PublicFloat-Bridging-Header.h"; sourceTree = "<group>"; };
+		18D6004B1B9DA0F1007EE280 /* HTTPSessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPSessionManager.swift; sourceTree = "<group>"; };
+		18D6004E1B9DAF3C007EE280 /* ArtWork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtWork.swift; sourceTree = "<group>"; };
+		18D600571B9DDEFA007EE280 /* PublicFloatTests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PublicFloatTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		18D600581B9DDF03007EE280 /* PublicFloat-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PublicFloat-Bridging-Header.h"; sourceTree = "<group>"; };
+		18D6005B1B9DE012007EE280 /* PublicFloatTestHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublicFloatTestHeader.h; sourceTree = "<group>"; };
 		18F565C41B98768C00A84DFA /* PFServerAPIStubs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFServerAPIStubs.h; sourceTree = "<group>"; };
 		18F565C51B98768C00A84DFA /* PFServerAPIStubs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFServerAPIStubs.m; sourceTree = "<group>"; };
 		2EEECC896E89A222E699BD9B /* Pods-PublicFloat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PublicFloat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PublicFloat/Pods-PublicFloat.debug.xcconfig"; sourceTree = "<group>"; };
@@ -73,8 +79,8 @@
 		18C7F1D41B84955300D8DF44 = {
 			isa = PBXGroup;
 			children = (
-				18C7F1DF1B84955300D8DF44 /* PublicFloat */,
 				18C7F1F51B84955300D8DF44 /* PublicFloatTests */,
+				18C7F1DF1B84955300D8DF44 /* PublicFloat */,
 				18C7F1DE1B84955300D8DF44 /* Products */,
 				B23E5CAFA0D09972A173F232 /* Pods */,
 				1F59D3C177AFCC3468159792 /* Frameworks */,
@@ -93,6 +99,9 @@
 		18C7F1DF1B84955300D8DF44 /* PublicFloat */ = {
 			isa = PBXGroup;
 			children = (
+				18D600581B9DDF03007EE280 /* PublicFloat-Bridging-Header.h */,
+				18D6004D1B9DAF2E007EE280 /* Model */,
+				18D6004A1B9DA0C9007EE280 /* Networking */,
 				18C7F1E21B84955300D8DF44 /* AppDelegate.swift */,
 				18C7F1E41B84955300D8DF44 /* ViewController.swift */,
 				18C7F1E61B84955300D8DF44 /* Main.storyboard */,
@@ -101,7 +110,6 @@
 				18C7F1E01B84955300D8DF44 /* Supporting Files */,
 				18F565C41B98768C00A84DFA /* PFServerAPIStubs.h */,
 				18F565C51B98768C00A84DFA /* PFServerAPIStubs.m */,
-				18F565C31B98768C00A84DFA /* PublicFloat-Bridging-Header.h */,
 			);
 			path = PublicFloat;
 			sourceTree = "<group>";
@@ -117,8 +125,10 @@
 		18C7F1F51B84955300D8DF44 /* PublicFloatTests */ = {
 			isa = PBXGroup;
 			children = (
+				18D600571B9DDEFA007EE280 /* PublicFloatTests-Bridging-Header.h */,
 				18C7F1F81B84955300D8DF44 /* PublicFloatTests.swift */,
 				18C7F1F61B84955300D8DF44 /* Supporting Files */,
+				18D6005B1B9DE012007EE280 /* PublicFloatTestHeader.h */,
 			);
 			path = PublicFloatTests;
 			sourceTree = "<group>";
@@ -129,6 +139,22 @@
 				18C7F1F71B84955300D8DF44 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		18D6004A1B9DA0C9007EE280 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				18D6004B1B9DA0F1007EE280 /* HTTPSessionManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		18D6004D1B9DAF2E007EE280 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				18D6004E1B9DAF3C007EE280 /* ArtWork.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		1F59D3C177AFCC3468159792 /* Frameworks */ = {
@@ -352,7 +378,9 @@
 			files = (
 				18C7F1E51B84955300D8DF44 /* ViewController.swift in Sources */,
 				18F565C61B98768C00A84DFA /* PFServerAPIStubs.m in Sources */,
+				18D6004C1B9DA0F1007EE280 /* HTTPSessionManager.swift in Sources */,
 				18C7F1E31B84955300D8DF44 /* AppDelegate.swift in Sources */,
+				18D6004F1B9DAF3C007EE280 /* ArtWork.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,6 +509,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = PublicFloat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -495,6 +524,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = PublicFloat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -507,6 +537,7 @@
 			baseConfigurationReference = 571D1435F557D76C524A1EB2 /* Pods-PublicFloatTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -518,6 +549,8 @@
 				INFOPLIST_FILE = PublicFloatTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PublicFloatTests/PublicFloatTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PublicFloat.app/PublicFloat";
 			};
 			name = Debug;
@@ -527,6 +560,7 @@
 			baseConfigurationReference = 075551875E2DBE7263AE4A39 /* Pods-PublicFloatTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -534,6 +568,7 @@
 				INFOPLIST_FILE = PublicFloatTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PublicFloatTests/PublicFloatTests-Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PublicFloat.app/PublicFloat";
 			};
 			name = Release;

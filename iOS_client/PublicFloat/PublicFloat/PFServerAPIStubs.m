@@ -10,6 +10,8 @@
 
 #import "PFServerAPIStubs.h"
 #import <OHHTTPStubs/OHHTTPStubs.h>
+#import <PublicFloat-Swift.h>
+
 
 @implementation PFServerAPIStubs
 

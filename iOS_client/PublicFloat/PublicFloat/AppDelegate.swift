@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +18,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        HTTPSessionManager.allArtWorks() >- subscribe(next: { responseDict, httpResponse in
+            NSLog("next")
+         }, error: { error in
+          NSLog(error.domain)
+        }, completed: {
+          NSLog("completed")
+        })
+        
         return true
     }
 
