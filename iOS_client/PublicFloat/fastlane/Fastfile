@@ -31,21 +31,28 @@ platform :ios do
     # increment_build_number
 
     #gym # Build your app - more options available
+    xctool :clean, [
+      "--workspace", "'PublicFloat.xcworkspace'",
+      "--scheme", "'PublicFloat'",
+    ]   
+  end
+
+  desc "Runs all the tests"
+  lane :test do
     xctool :test, [
       "--workspace", "'PublicFloat.xcworkspace'",
       "--scheme", "'PublicFloat'",
       "--configuration", "Debug",
       "--sdk", "iphonesimulator",
-      "--arch", "i386"
+      "--arch", "i386",
+      "--reporter", "junit:junit-report.xml"
     ].join(" ") 
-  end
-
-  desc "Runs all the tests"
-  lane :test do
     gcovr(
        html: true,
        html_details: true,
-        output: "./code-coverage/report.html"
+       print_summary: true,
+       verbose: true,
+       output: "./code-coverage/report.html"
     )
   end
 

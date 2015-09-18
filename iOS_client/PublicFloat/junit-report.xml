@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<testsuites name="AllTestUnits" tests="2" failures="0" errors="0" time="0.266837">
+    <testsuite tests="2" failures="0" errors="0" time="0.266837" timestamp="2015-09-19T02:15:54GMT+10:00" name="Toplevel Test Suite">
+        <testcase classname="PublicFloatTests" name="testExample" time="0.001603"></testcase>
+        <testcase classname="PublicFloatTests" name="testPerformanceExample" time="0.264799">
+            <system-out>2015-09-19 02:15:54.523 PublicFloat[15688:532615] next
+2015-09-19 02:15:54.523 PublicFloat[15688:532615] completed
+&lt;unknown&gt;:0: Test Case '-[PublicFloatTests.PublicFloatTests testPerformanceExample]' measured [Time, seconds] average: 0.000, relative standard deviation: 113.413%, values: [0.000004, 0.000001, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000], performanceMetricID:com.apple.XCTPerformanceMetric_WallClockTime, baselineName: "", baselineAverage: , maxPercentRegression: 10.000%, maxPercentRelativeStandardDeviation: 10.000%, maxRegression: 0.100, maxStandardDeviation: 0.100
+</system-out>
+        </testcase>
+    </testsuite>
+</testsuites>
