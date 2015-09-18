@@ -8,7 +8,6 @@
 
 import UIKit
 import AFNetworking
-import Alamofire
 import OHHTTPStubs
 import ObjectMapper
 import RxCocoa
