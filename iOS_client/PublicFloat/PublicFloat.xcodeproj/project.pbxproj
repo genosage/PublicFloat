@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18934E781BAB130100657490 /* NSObject+AWStubAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 18934E771BAB130100657490 /* NSObject+AWStubAdditions.m */; };
 		18C7F1E31B84955300D8DF44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C7F1E21B84955300D8DF44 /* AppDelegate.swift */; };
 		18C7F1E51B84955300D8DF44 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C7F1E41B84955300D8DF44 /* ViewController.swift */; };
 		18C7F1E81B84955300D8DF44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18C7F1E61B84955300D8DF44 /* Main.storyboard */; };
@@ -32,6 +33,8 @@
 
 /* Begin PBXFileReference section */
 		075551875E2DBE7263AE4A39 /* Pods-PublicFloatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PublicFloatTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PublicFloatTests/Pods-PublicFloatTests.release.xcconfig"; sourceTree = "<group>"; };
+		18934E761BAB130100657490 /* NSObject+AWStubAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+AWStubAdditions.h"; sourceTree = "<group>"; };
+		18934E771BAB130100657490 /* NSObject+AWStubAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AWStubAdditions.m"; sourceTree = "<group>"; };
 		18C7F1DD1B84955300D8DF44 /* PublicFloat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PublicFloat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18C7F1E11B84955300D8DF44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18C7F1E21B84955300D8DF44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +79,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18934E751BAB12D800657490 /* TestData */ = {
+			isa = PBXGroup;
+			children = (
+				18934E761BAB130100657490 /* NSObject+AWStubAdditions.h */,
+				18934E771BAB130100657490 /* NSObject+AWStubAdditions.m */,
+			);
+			path = TestData;
+			sourceTree = "<group>";
+		};
 		18C7F1D41B84955300D8DF44 = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +137,7 @@
 		18C7F1F51B84955300D8DF44 /* PublicFloatTests */ = {
 			isa = PBXGroup;
 			children = (
+				18934E751BAB12D800657490 /* TestData */,
 				18D600571B9DDEFA007EE280 /* PublicFloatTests-Bridging-Header.h */,
 				18C7F1F81B84955300D8DF44 /* PublicFloatTests.swift */,
 				18C7F1F61B84955300D8DF44 /* Supporting Files */,
@@ -389,6 +402,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18C7F1F91B84955300D8DF44 /* PublicFloatTests.swift in Sources */,
+				18934E781BAB130100657490 /* NSObject+AWStubAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

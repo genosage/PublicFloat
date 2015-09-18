@@ -20,7 +20,6 @@ PODS:
   - AFNetworking/UIKit (2.6.0):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - Alamofire (1.3.1)
   - Kiwi (2.4.0)
   - Nimble (1.0.0)
   - ObjectMapper (0.15)
@@ -45,7 +44,6 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
-  - Alamofire (~> 1.3)
   - Kiwi
   - Nimble (~> 1.0.0)
   - ObjectMapper
@@ -57,7 +55,6 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 79f7eb1a0fcfa7beb409332b2ca49afe9ce53b05
-  Alamofire: e4ab637e3195b645c814b87a652373439e59f2a4
   Kiwi: f49c9d54b28917df5928fe44968a39ed198cb8a8
   Nimble: 8bee528e5fcc403653076545db562d2b5db7bb87
   ObjectMapper: 0656dc1c155825897e5acfcd25362c6b61786dcb

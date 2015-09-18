@@ -19,6 +19,7 @@
 {
     [self stubFetchPhotoRequest];
     [self stubLoginRequest];
+    
 }
 
 + (void)stubLoginRequest

@@ -53,7 +53,6 @@ code_sign_if_enabled() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'Pods-PublicFloat/AFNetworking.framework'
-  install_framework 'Pods-PublicFloat/Alamofire.framework'
   install_framework 'Pods-PublicFloat/OHHTTPStubs.framework'
   install_framework 'Pods-PublicFloat/ObjectMapper.framework'
   install_framework 'Pods-PublicFloat/RxCocoa.framework'
@@ -62,7 +61,6 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'Pods-PublicFloat/AFNetworking.framework'
-  install_framework 'Pods-PublicFloat/Alamofire.framework'
   install_framework 'Pods-PublicFloat/OHHTTPStubs.framework'
   install_framework 'Pods-PublicFloat/ObjectMapper.framework'
   install_framework 'Pods-PublicFloat/RxCocoa.framework'
