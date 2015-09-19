@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		185C59D01BAD858100C4A33B /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 185C59CF1BAD858100C4A33B /* CoreBluetooth.framework */; };
+		185C59D21BAD858D00C4A33B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 185C59D11BAD858D00C4A33B /* CoreLocation.framework */; };
 		18B069F71BAD60B40086B217 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B069F61BAD60B40086B217 /* AppDelegate.swift */; };
 		18B069F91BAD60B40086B217 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B069F81BAD60B40086B217 /* ViewController.swift */; };
 		18B069FC1BAD60B40086B217 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18B069FA1BAD60B40086B217 /* Main.storyboard */; };
@@ -27,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		185C59CF1BAD858100C4A33B /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		185C59D11BAD858D00C4A33B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		18B069F11BAD60B40086B217 /* iBeaconImposter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iBeaconImposter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18B069F51BAD60B40086B217 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18B069F61BAD60B40086B217 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +49,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				185C59D21BAD858D00C4A33B /* CoreLocation.framework in Frameworks */,
+				185C59D01BAD858100C4A33B /* CoreBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +67,8 @@
 		18B069E81BAD60B40086B217 = {
 			isa = PBXGroup;
 			children = (
+				185C59D11BAD858D00C4A33B /* CoreLocation.framework */,
+				185C59CF1BAD858100C4A33B /* CoreBluetooth.framework */,
 				18B069F31BAD60B40086B217 /* iBeaconImposter */,
 				18B06A091BAD60B40086B217 /* iBeaconImposterTests */,
 				18B069F21BAD60B40086B217 /* Products */,
@@ -159,11 +167,13 @@
 		18B069E91BAD60B40086B217 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = YellowTeam;
 				TargetAttributes = {
 					18B069F01BAD60B40086B217 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 32WVAF3H56;
 					};
 					18B06A051BAD60B40086B217 = {
 						CreatedOnToolsVersion = 6.4;
@@ -344,9 +354,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = iBeaconImposter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -354,9 +367,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = iBeaconImposter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -413,6 +429,7 @@
 				18B06A121BAD60B40086B217 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18B06A131BAD60B40086B217 /* Build configuration list for PBXNativeTarget "iBeaconImposterTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +438,7 @@
 				18B06A151BAD60B40086B217 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

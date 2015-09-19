@@ -26,21 +26,31 @@ class ViewController: UIViewController, CBPeripheralManagerDelegate {
     
     func startImposter() {
         let task = NSUUID()
-        let beaconRegion = CLBeaconRegion(proximityUUID: task, identifier: "com.unimelb.publicfloat.yellow")
+        let beaconRegion = CLBeaconRegion(proximityUUID: task, major: 1, minor: 1, identifier: "com.unimelb.publicfloat.yellow")
+        //CLBeaconRegion(proximityUUID: task, identifier: "com.unimelb.publicfloat.yellow")
         let beaconPeripheraData = beaconRegion.peripheralDataWithMeasuredPower(nil)
         peripheraManager = CBPeripheralManager(delegate:self, queue:nil, options:nil)
-        peripheraManager.startAdvertising(beaconPeripheraData as [NSObject : AnyObject])
+        let data = NSDictionary(dictionary: beaconPeripheraData)
+        peripheraManager.startAdvertising((data as! [String : AnyObject]))
     }
     
-    func peripheralManagerDidUpdateState(peripheral: CBPeripheralManager!) {
-        NSLog("Did update state.\n")
+    func peripheralManagerDidUpdateState(peripheral: CBPeripheralManager) {
+        if (peripheral.state == CBPeripheralManagerState.PoweredOn) {
+                NSLog("Did update state power on.\n")
+        }
+        else if (peripheral.state == CBPeripheralManagerState.PoweredOff) {
+                 NSLog("Did update state power off.\n")
+        }
+        else if(peripheral.state == CBPeripheralManagerState.Unauthorized) {
+                 NSLog("Did update state unauthorized.\n")
+        }
     }
     
-    func peripheralManager(peripheral: CBPeripheralManager!, didReceiveReadRequest request: CBATTRequest!) {
+    func peripheralManager(peripheral: CBPeripheralManager, didReceiveReadRequest request: CBATTRequest) {
         NSLog("Did receive read request.\n")
     }
     
-    func peripheralManagerDidStartAdvertising(peripheral: CBPeripheralManager!, error: NSError!) {
+    func peripheralManagerDidStartAdvertising(peripheral: CBPeripheralManager, error: NSError?) {
         NSLog("Did start advertising.\n")
     }
 }
