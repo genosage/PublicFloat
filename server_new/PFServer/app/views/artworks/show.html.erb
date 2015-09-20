@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @artwork.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @artwork.description %>
+</p>
+
+<p>
+  <strong>Artwork longtitude:</strong>
+  <%= @artwork.artwork_longtitude %>
+</p>
+
+<p>
+  <strong>Artwork latitude:</strong>
+  <%= @artwork.artwork_latitude %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @artwork.title %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @artwork.image_url %>
+</p>
+
+<%= link_to 'Edit', edit_artwork_path(@artwork) %> |
+<%= link_to 'Back', artworks_path %>

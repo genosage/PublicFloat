@@ -1,0 +1,1 @@
+rails generate scaffold Artwork name:string description:text artwork_longtitude:decimal artwork_latitude:decimal title:string image_url:string
