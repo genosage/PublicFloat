@@ -3,33 +3,26 @@
 <h1>Listing Artworks</h1>
 
 <table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Artwork longtitude</th>
-      <th>Artwork latitude</th>
-      <th>Title</th>
-      <th>Image url</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <% @artworks.each do |artwork| %>
+    <tr class= "<%= cycle('list_line_odd','list_line_even') %>">
+       <td>
+        <%=image_tag(artwork.image_url, class:'list_image', width:'160', height:'160') %>
+       </td>
 
-  <tbody>
-    <% @artworks.each do |artwork| %>
-      <tr>
-        <td><%= artwork.name %></td>
-        <td><%= artwork.description %></td>
-        <td><%= artwork.artwork_longtitude %></td>
-        <td><%= artwork.artwork_latitude %></td>
-        <td><%= artwork.title %></td>
-        <td><%= artwork.image_url %></td>
-        <td><%= link_to 'Show', artwork %></td>
-        <td><%= link_to 'Edit', edit_artwork_path(artwork) %></td>
-        <td><%= link_to 'Destroy', artwork, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <td class="list_description">
+        <dl>
+          <dt><%= artwork.title %></dt>
+          <dt><%= truncate(strip_tags(artwork.description), length: 80) %></dt>
+        </dl>
+      </td>
+
+      <td class="list_actions">
+        <%= link_to 'Show', artwork %> <br/>
+        <%= link_to 'Edit', edit_artwork_path(artwork)%><br/>
+        <%= link_to 'Destroy', artwork, data: { confirm: 'Are you sure?' }, method: :delete  %>
+      </td>
       </tr>
-    <% end %>
-  </tbody>
+      <% end %>
 </table>
 
 <br>
