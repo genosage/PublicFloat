@@ -30,5 +30,10 @@
   <%= @artwork.image_url %>
 </p>
 
+<p>
+  <strong>iBeacon UUID:</strong>
+  <%= @artwork.ibeaconuuid %>
+</p>
+
 <%= link_to 'Edit', edit_artwork_path(@artwork) %> |
 <%= link_to 'Back', artworks_path %>
