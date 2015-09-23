@@ -8,6 +8,7 @@ class Artwork < ActiveRecord::Base
     validates :image_url, uniqueness: true
     validates :name, presence: true
     validates :name, uniqueness: true
+    validates :ibeaconuuid, uniqueness: true, presence: true, allow_blank: false, allow_nil: false
 
     has_many :emotions
     has_many :comments
