@@ -10,4 +10,5 @@ class Artwork < ActiveRecord::Base
     validates :name, uniqueness: true
 
     has_many :emotions
+    has_many :comments
 end
