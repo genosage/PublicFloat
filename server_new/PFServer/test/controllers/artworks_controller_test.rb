@@ -9,7 +9,8 @@ class ArtworksControllerTest < ActionController::TestCase
         image_url: 'image.jpg',
         name: 'artwork name',
         artwork_longtitude: 123456.1,
-        artwork_latitude: 123456.1
+        artwork_latitude: 123456.1,
+        ibeaconuuid: "abcdefghijk"
     }
   end
 
