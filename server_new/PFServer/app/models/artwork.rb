@@ -8,4 +8,6 @@ class Artwork < ActiveRecord::Base
     validates :image_url, uniqueness: true
     validates :name, presence: true
     validates :name, uniqueness: true
+
+    has_many :emotions
 end
