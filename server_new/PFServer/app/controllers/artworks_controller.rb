@@ -61,6 +61,19 @@ class ArtworksController < ApplicationController
     end
   end
 
+  def related_comments
+     begin
+        @comments = Comment.where(artwork_id: params[:id]).limit(1000)  # Comment.find_by_artwork_id(params[:id])
+     rescue
+        logger.error "Attempt to find comments that belong to an artwork #{params[:id]}"
+        redirect_to artworks_url, notice: 'Artwork does not exist'
+     else
+        respond_to do |format|
+          format.json { render json: @comments, status: :ok }
+        end
+     end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_artwork
