@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Emotions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Emotion name</th>
+      <th>Artwork</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @emotions.each do |emotion| %>
+      <tr>
+        <td><%= emotion.emotion_name %></td>
+        <td><%= emotion.artwork_id %></td>
+        <td><%= link_to 'Show', emotion %></td>
+        <td><%= link_to 'Edit', edit_emotion_path(emotion) %></td>
+        <td><%= link_to 'Destroy', emotion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Emotion', new_emotion_path %>
