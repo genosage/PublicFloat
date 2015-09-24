@@ -12,9 +12,14 @@ public class ArtWork: NSObject {
     
     var id: String = ""
     var name: String = ""
-    var desc: String = ""
+    var location: String = ""
     var imageUrl: String = ""
+
     
-    
+    init(name: String, imageUrl: String, location: String) {
+        self.name = name
+        self.location = location
+        self.imageUrl = imageUrl
+    }
     
 }
