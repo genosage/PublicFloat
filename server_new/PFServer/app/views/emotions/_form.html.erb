@@ -1,0 +1,25 @@
+<%= form_for(@emotion) do |f| %>
+  <% if @emotion.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@emotion.errors.count, "error") %> prohibited this emotion from being saved:</h2>
+
+      <ul>
+      <% @emotion.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :emotion_name %><br>
+    <%= f.text_area :emotion_name %>
+  </div>
+  <div class="field">
+    <%= f.label :artwork_id %><br>
+    <%= f.number_field :artwork_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

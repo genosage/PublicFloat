@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Artworks</h1>
+
+<table>
+  <% @artworks.each do |artwork| %>
+    <tr class= "<%= cycle('list_line_odd','list_line_even') %>">
+       <td>
+        <%=image_tag(artwork.image_url, class:'list_image', width:'160', height:'160') %>
+       </td>
+
+      <td class="list_description">
+        <dl>
+          <dt><%= artwork.title %></dt>
+          <dt><%= truncate(strip_tags(artwork.description), length: 80) %></dt>
+        </dl>
+      </td>
+
+      <td class="list_actions">
+        <%= link_to 'Show', artwork %> <br/>
+        <%= link_to 'Edit', edit_artwork_path(artwork)%><br/>
+        <%= link_to 'Destroy', artwork, data: { confirm: 'Are you sure?' }, method: :delete  %>
+      </td>
+      </tr>
+      <% end %>
+</table>
+
+<br>
+
+<%= link_to 'New Artwork', new_artwork_path %>
