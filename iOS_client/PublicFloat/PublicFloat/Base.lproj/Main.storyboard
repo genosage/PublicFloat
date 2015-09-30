@@ -87,9 +87,9 @@
         <!--Artwork-->
         <scene sceneID="Q8U-P2-Ol0">
             <objects>
-                <tableViewController title="Artwork" id="bTO-Er-4Dr" customClass="ArtworkListViewController" customModule="PublicFloat" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Artwork" id="bTO-Er-4Dr" userLabel="Artwork" customClass="ArtworkListViewController" customModule="PublicFloat" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Rm9-31-2S6">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <searchBar key="tableHeaderView" contentMode="redraw" id="aav-Rn-QDz">
@@ -119,7 +119,7 @@
                         </connections>
                     </tableView>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <tabBarItem key="tabBarItem" title="Item" id="fzw-Zo-02i"/>
+                    <tabBarItem key="tabBarItem" title="Artwork" id="fzw-Zo-02i"/>
                     <connections>
                         <outlet property="searchDisplayController" destination="w0b-Ad-Lc2" id="t2Q-zs-Do7"/>
                     </connections>
@@ -142,7 +142,7 @@
             <objects>
                 <viewController id="EGM-YC-g2O" customClass="ArtworkDetailViewController" customModule="PublicFloat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="see-80-ipE">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="VQW-ay-BaZ">
@@ -191,31 +191,75 @@
             </objects>
             <point key="canvasLocation" x="3051" y="355"/>
         </scene>
-        <!--Item 2-->
+        <!--About-->
         <scene sceneID="GRm-0J-Rqn">
             <objects>
-                <viewController id="VgW-uT-RCQ" sceneMemberID="viewController">
+                <viewController title="About" id="VgW-uT-RCQ" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zIH-b0-Jj5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TTe-7y-Bl5">
+                                <rect key="frame" x="53" y="57" width="123" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PublicFloat-Yellow" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iAC-bC-wci">
+                                <rect key="frame" x="82" y="119" width="165" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Albert Wang" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dJe-fd-B4X">
+                                <rect key="frame" x="82" y="210" width="94" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tian Zhang" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yLt-Vk-MDc">
+                                <rect key="frame" x="82" y="256" width="86" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Xing Hu" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FJc-rU-Hjj">
+                                <rect key="frame" x="82" y="304" width="61" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zheng Chai" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WMM-11-y4i">
+                                <rect key="frame" x="82" y="352" width="89" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="ay7-9G-IBd"/>
+                    <tabBarItem key="tabBarItem" title="About" id="ay7-9G-IBd" userLabel="About"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jyI-H5-kB6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1795.7333333333333" y="1028.0799999999999"/>
+            <point key="canvasLocation" x="1795" y="1028"/>
         </scene>
-        <!--Item 2-->
+        <!--Map-->
         <scene sceneID="e3x-2N-Oaw">
             <objects>
-                <viewController id="snq-G5-cXV" customClass="MapViewController" customModule="PublicFloat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Map" id="snq-G5-cXV" customClass="MapViewController" customModule="PublicFloat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NDA-1A-8yV">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="PSn-PW-gFc"/>
+                    <tabBarItem key="tabBarItem" title="Map" id="PSn-PW-gFc"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4r7-Hr-fAN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -263,13 +307,7 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Emotion" id="RzN-80-5rI">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="1gP-bj-H6d">
-                            <connections>
-                                <segue destination="Y7L-Qz-U6X" kind="modal" id="EiH-6e-i4K"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Emotion" id="RzN-80-5rI"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5s2-cn-ao3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -280,6 +318,7 @@
         <scene sceneID="G1W-2q-VOy">
             <objects>
                 <navigationController id="v6i-FF-VDw" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="GKR-NA-Uzk"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ntz-hs-1Cn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -304,9 +343,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="VgW-uT-RCQ" kind="relationship" relationship="viewControllers" id="AFD-ed-RIY"/>
-                        <segue destination="snq-G5-cXV" kind="relationship" relationship="viewControllers" id="YbS-Ki-4nK"/>
-                        <segue destination="bTO-Er-4Dr" kind="relationship" relationship="viewControllers" id="zAT-96-cMY"/>
+                        <segue destination="bTO-Er-4Dr" kind="relationship" relationship="viewControllers" id="LNY-aa-zNr"/>
+                        <segue destination="snq-G5-cXV" kind="relationship" relationship="viewControllers" id="g69-HB-fHv"/>
+                        <segue destination="VgW-uT-RCQ" kind="relationship" relationship="viewControllers" id="eTm-FQ-SYO"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CLI-fU-h7f" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -345,6 +384,5 @@
     <inferredMetricsTieBreakers>
         <segue reference="ZES-f3-Rck"/>
         <segue reference="JgH-ke-eI1"/>
-        <segue reference="EiH-6e-i4K"/>
     </inferredMetricsTieBreakers>
 </document>

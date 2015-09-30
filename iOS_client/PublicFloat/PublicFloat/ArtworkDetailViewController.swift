@@ -22,13 +22,11 @@ class ArtworkDetailViewController: UIViewController {
         var imageView : UIImageView = UIImageView(frame:CGRectMake(10, 50, 300, 300));
                         imageView.image = UIImage(named:art.name)
         
-                        //var descView : UILabel = UILabel(frame:CGRectMake(10, 300, 300, 300));
-                        //descView.text = "discription:   "+art.location
                         self.view.addSubview(imageView)
-                        //self.view.addSubview(descView)
+        
         
         descButton.frame = CGRectMake(10, 300, 300, 300)
-        descButton.setTitle("discription:   "+art.location, forState: .Normal)
+        descButton.setTitle("Location:   "+art.location, forState: .Normal)
         
     }
     override func viewWillAppear(animated: Bool) {

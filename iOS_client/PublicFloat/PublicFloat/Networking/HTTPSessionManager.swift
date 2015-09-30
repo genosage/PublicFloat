@@ -11,7 +11,7 @@ import RxCocoa
 import RxSwift
 import AFNetworking
 
-public enum Emotion: String {
+public enum Emotions: String {
     
     case love = "love"
     case depressed = "depressed"
@@ -38,7 +38,7 @@ public class HTTPSessionManager: NSObject {
         })
     }
     
-    public static func artWorksLinkedWithEmotion(emotion: Emotion) -> Observable<(NSDictionary!, NSHTTPURLResponse!)> {
+    public static func artWorksLinkedWithEmotion(emotion: Emotions) -> Observable<(NSDictionary!, NSHTTPURLResponse!)> {
 
         return create({observer in
             self.sessionManager.GET("/login", parameters:nil, success: { requestOperation, responseObject in
