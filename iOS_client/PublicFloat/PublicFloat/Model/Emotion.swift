@@ -14,6 +14,6 @@ public class Emotion: NSObject {
     var emotion_name: String = ""
     var artwork_id: Int = 0
     
- 
+  
     
 }

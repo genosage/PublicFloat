@@ -21,8 +21,6 @@ class ArtworkListViewController: UITableViewController,UISearchBarDelegate, UISe
         super.viewDidLoad()
 
         self.artworks = [ArtWork.init( name:"Bush_Type_cast_2",imageUrl:"Bush_Type_cast_2",location:"Level G South Gallery"),
-            ArtWork.init( name:"Bush The recliners were only the beginning",imageUrl:"Bush_reclinder",location:"Level G North Galleryaa"),
-            ArtWork.init( name:"Bush_Applestoop",imageUrl:"Bush_apple",location:"Level 1 South"),
             ArtWork.init( name:"Bush_Lampre",imageUrl:"Bush_Lampre",location:"Level G South Gallery")]
     
         self.filteredArtworks=[]

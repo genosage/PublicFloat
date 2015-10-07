@@ -15,9 +15,11 @@ import RxSwift
 
 class ArtworkMapViewController: UIViewController {
 
-var imageView = UIImageView()
-var expanded = false
+    var imageView = UIImageView()
+    var expanded = false
 
+    @IBOutlet var testTextField: UITextField!
+    
 override func viewDidLoad() {
     super.viewDidLoad()
     

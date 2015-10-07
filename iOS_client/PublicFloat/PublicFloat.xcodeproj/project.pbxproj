@@ -25,9 +25,10 @@
 		7951BE041BBB5E4800D34C69 /* Emotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7951BE031BBB5E4800D34C69 /* Emotion.swift */; };
 		7951BE061BBB5F8700D34C69 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7951BE051BBB5F8700D34C69 /* Comment.swift */; };
 		7951BE081BBB5FFE00D34C69 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7951BE071BBB5FFE00D34C69 /* User.swift */; };
+		7951BE0E1BBBD4B100D34C69 /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7951BE0D1BBBD4B100D34C69 /* InputViewController.swift */; };
+		7968EBE51BC4BA18005C5DEF /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7968EBE41BC4BA18005C5DEF /* CommentViewController.swift */; };
 		797AF8EA1BB45E36005C292A /* ArtworkMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797AF8E91BB45E36005C292A /* ArtworkMapViewController.swift */; };
 		797AF8EC1BB45EED005C292A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797AF8EB1BB45EED005C292A /* MapViewController.swift */; };
-		797AF8EE1BB46497005C292A /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797AF8ED1BB46497005C292A /* WelcomeViewController.swift */; };
 		797AF8F01BB464B0005C292A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797AF8EF1BB464B0005C292A /* LoginViewController.swift */; };
 		BA42C625906CF704A66DA16A /* Pods_PublicFloat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40156B90B0C11FB5D2C48859 /* Pods_PublicFloat.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
@@ -73,9 +74,10 @@
 		7951BE031BBB5E4800D34C69 /* Emotion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Emotion.swift; sourceTree = "<group>"; };
 		7951BE051BBB5F8700D34C69 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		7951BE071BBB5FFE00D34C69 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		7951BE0D1BBBD4B100D34C69 /* InputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
+		7968EBE41BC4BA18005C5DEF /* CommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
 		797AF8E91BB45E36005C292A /* ArtworkMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArtworkMapViewController.swift; path = PublicFloat/ArtworkMapViewController.swift; sourceTree = "<group>"; };
 		797AF8EB1BB45EED005C292A /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = PublicFloat/MapViewController.swift; sourceTree = "<group>"; };
-		797AF8ED1BB46497005C292A /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WelcomeViewController.swift; path = PublicFloat/WelcomeViewController.swift; sourceTree = "<group>"; };
 		797AF8EF1BB464B0005C292A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = PublicFloat/LoginViewController.swift; sourceTree = "<group>"; };
 		82797EA8EE0F012FE48F39D4 /* Pods-PublicFloat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PublicFloat.release.xcconfig"; path = "Pods/Target Support Files/Pods-PublicFloat/Pods-PublicFloat.release.xcconfig"; sourceTree = "<group>"; };
 		A956685C0083C5341E34F55B /* Pods_PublicFloatTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PublicFloatTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -211,11 +213,12 @@
 				7909F1131BB429CC0096C6F1 /* ArtworkDetailViewController.swift */,
 				797AF8E91BB45E36005C292A /* ArtworkMapViewController.swift */,
 				797AF8EB1BB45EED005C292A /* MapViewController.swift */,
-				797AF8ED1BB46497005C292A /* WelcomeViewController.swift */,
 				797AF8EF1BB464B0005C292A /* LoginViewController.swift */,
 				7909F1041BB407230096C6F1 /* ArtworkListViewController.swift */,
 				7909F1051BB407230096C6F1 /* EmotionViewController.swift */,
 				7909F1071BB407230096C6F1 /* EmotionCell.swift */,
+				7951BE0D1BBBD4B100D34C69 /* InputViewController.swift */,
+				7968EBE41BC4BA18005C5DEF /* CommentViewController.swift */,
 			);
 			name = View;
 			path = ..;
@@ -437,12 +440,13 @@
 				7909F1141BB429CC0096C6F1 /* ArtworkDetailViewController.swift in Sources */,
 				18F565C61B98768C00A84DFA /* PFServerAPIStubs.m in Sources */,
 				7951BE081BBB5FFE00D34C69 /* User.swift in Sources */,
+				7951BE0E1BBBD4B100D34C69 /* InputViewController.swift in Sources */,
 				797AF8EA1BB45E36005C292A /* ArtworkMapViewController.swift in Sources */,
 				18D6004C1B9DA0F1007EE280 /* HTTPSessionManager.swift in Sources */,
 				797AF8EC1BB45EED005C292A /* MapViewController.swift in Sources */,
+				7968EBE51BC4BA18005C5DEF /* CommentViewController.swift in Sources */,
 				18C7F1E31B84955300D8DF44 /* AppDelegate.swift in Sources */,
 				18D6004F1B9DAF3C007EE280 /* ArtWork.swift in Sources */,
-				797AF8EE1BB46497005C292A /* WelcomeViewController.swift in Sources */,
 				7951BE061BBB5F8700D34C69 /* Comment.swift in Sources */,
 				7909F1081BB407230096C6F1 /* ArtworkListViewController.swift in Sources */,
 				797AF8F01BB464B0005C292A /* LoginViewController.swift in Sources */,

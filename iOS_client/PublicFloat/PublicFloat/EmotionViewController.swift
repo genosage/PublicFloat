@@ -17,23 +17,27 @@ class EmotionViewController:  UITableViewController
     var emojPic = ["1-1","2","3","4"]
     var emojName = ["love", "war", "history", "happy"]
    
-
+    var current_user:User?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       //self.edgesForExtendedLayout = UIRectEdgeNone;
+        showAlert()
         }
+    
+    
+    func showAlert()
+    {
+        let alertController = UIAlertController(title: "Welcome!\(current_user!.user_email)", message: nil, preferredStyle: .Alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: .Default, handler: nil))
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-//  override  func numberOfSectionsInTableView(tableView: UITableView) -> Int
-//    {
-//        return emojPic.count
-//    }
     
    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
@@ -66,6 +70,13 @@ class EmotionViewController:  UITableViewController
 //                    destination.emoBelong = self.emojName[index]
 //                }
 //            }
+            let nar = segue.destinationViewController as? UITabBarController
+                if let list = nar!.viewControllers!.first as? ArtworkListViewController{
+                            if let index = tableView.indexPathForSelectedRow()?.row {
+                                print(emojName[index])
+                                list.emoBelong = self.emojName[index]
+                            }
+                        }
         }
     }
 

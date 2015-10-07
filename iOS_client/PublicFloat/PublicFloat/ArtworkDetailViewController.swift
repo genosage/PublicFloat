@@ -16,6 +16,7 @@ class ArtworkDetailViewController: UIViewController {
     
     @IBOutlet var descButton: UIButton!
     
+    @IBOutlet var commButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -28,6 +29,10 @@ class ArtworkDetailViewController: UIViewController {
         descButton.frame = CGRectMake(10, 300, 300, 300)
         descButton.setTitle("Location:   "+art.location, forState: .Normal)
         
+        commButton.frame = CGRectMake(10, 330, 300, 300)
+        commButton.setTitle("Comment", forState: .Normal)
+
+        
     }
     override func viewWillAppear(animated: Bool) {
         
@@ -38,6 +43,13 @@ class ArtworkDetailViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+//    @IBAction func close(segue: UIStoryboardSegue){
+//        if (segue.identifier == "testSegue"){
+//            var vc = segue.sourceViewController as! ArtworkMapViewController
+//            commButton.setTitle(vc.testTextField.text, forState: .Normal)
+//        }
+//    }
     
     
 }
