@@ -15,9 +15,10 @@ public class Comment:NSObject {
     var user_id: Int = 0
     var comment_text: String = ""
     
-    init(comment_text: String,user_id: Int,  comment_id:Int){
+    init(comment_text: String,user_id: Int,comment_id:Int, artwork_id:Int){
         self.comment_text = comment_text
         self.user_id = user_id
         self.comment_id = comment_id
+        self.artwork_id = artwork_id
     }
 }

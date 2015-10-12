@@ -8,26 +8,38 @@
 
 import Foundation
 import UIKit
+import AFNetworking
+
+var databody = GetData()
 
 class EmotionViewController:  UITableViewController
 {
     
    
+   var emotions = [Emotion]()
     
-    var emojPic = ["1-1","2","3","4"]
-    var emojName = ["love", "war", "history", "happy"]
-   
-    var current_user:User?
+    var emojPic = ["1-1","2","3","4","4","4","4","4","4","4","4"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         showAlert()
-        }
+        
+        databody.fetchEmotions({ (emotions) -> Void in
+            dispatch_async(dispatch_get_main_queue(), {
+
+                self.emotions = emotions
+                self.tableView.reloadData()
+            })
+            }, error: nil)
+
+    }
     
     
+
     func showAlert()
     {
-        let alertController = UIAlertController(title: "Welcome!\(current_user!.user_email)", message: nil, preferredStyle: .Alert)
+        // FIX ME: Current user could be nil.
+        let alertController = UIAlertController(title: "Welcome!\(AppDelegate.current_user.user_email)", message: nil, preferredStyle: .Alert)
         alertController.addAction(UIAlertAction(title: "Dismiss", style: .Default, handler: nil))
         
         self.presentViewController(alertController, animated: true, completion: nil)
@@ -42,7 +54,7 @@ class EmotionViewController:  UITableViewController
    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         //make sure you use the relevant array sizes
-        return emojName.count
+        return emotions.count
     }
     
   override  func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
@@ -54,7 +66,7 @@ class EmotionViewController:  UITableViewController
 
          cell = EmotionCell(style: UITableViewCellStyle.Default, reuseIdentifier: "emoCell")
         }
-        let stringTitle = emojName[indexPath.row] as String //NOT NSString
+        let stringTitle = emotions[indexPath.row].emotion_name  //NOT NSString
         let strName = emojPic[indexPath.row] as String
         cell.emoName.text=stringTitle
         cell.emoPic.image = UIImage(named: strName)
@@ -64,23 +76,21 @@ class EmotionViewController:  UITableViewController
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "artworkRelatedSegue" {
-//            if let destination = segue.destinationViewController as? ArtworkListViewController {
-//                if let index = tableView.indexPathForSelectedRow()?.row {
-//                    print(emojName[index])
-//                    destination.emoBelong = self.emojName[index]
-//                }
-//            }
-            let nar = segue.destinationViewController as? UITabBarController
-                if let list = nar!.viewControllers!.first as? ArtworkListViewController{
-                            if let index = tableView.indexPathForSelectedRow()?.row {
-                                print(emojName[index])
-                                list.emoBelong = self.emojName[index]
-                            }
-                        }
+            if let let viewController = segue.destinationViewController as? UITabBarController {
+                 let tableVC = viewController.viewControllers!.first as! ArtworkListViewController
+                if let index = tableView.indexPathForSelectedRow()?.row {
+                    
+                    tableVC.emoBelong = emotions[index]
+                }
+
+             
+                                   }
+            }
+
         }
     }
 
-    }
+    
 
 
 

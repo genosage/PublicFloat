@@ -13,9 +13,11 @@ import ObjectMapper
 import RxCocoa
 import RxSwift
 
+
+
 class LoginViewController : UIViewController,UITextFieldDelegate {
     
-  
+  var current_user:User?
     var user:User?
     
     @IBOutlet var email: UITextField!
@@ -29,7 +31,7 @@ class LoginViewController : UIViewController,UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         email.delegate = self
-        
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -37,15 +39,28 @@ class LoginViewController : UIViewController,UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    func postUser(){
+        let manager = AFHTTPRequestOperationManager()
+        var user_params = ["user":["user_email":self.email.text]]
+        manager.POST( "http://localhost:3000/users/#new",
+            parameters: user_params,
+            success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
+                println("JSON: " + responseObject.description)
+            },
+            failure: { (operation: AFHTTPRequestOperation!,error: NSError!) in
+                println("Error: " + error.localizedDescription)
+        })
+    }
     
     func login(){
         current_email=self.email.text
         if (emailValidate(current_email)==true){
-            user=User.new()
+            user = AppDelegate.current_user
             user?.user_email = current_email
             self.performSegueWithIdentifier("userLoginSegue", sender: self)
             println(user)
             println("useremal::::\(user!.user_email)")
+            postUser()
             
         }else{
             showAlert()
@@ -69,7 +84,7 @@ class LoginViewController : UIViewController,UITextFieldDelegate {
             let viewController = segue.destinationViewController as! UINavigationController
             
             let tableVC = viewController.viewControllers.first as! EmotionViewController
-            tableVC.current_user = self.user
+            current_user = self.user
         }
     }
     

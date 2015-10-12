@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 class ArtworkListViewController: UITableViewController,UISearchBarDelegate, UISearchDisplayDelegate {
     
-    var emoBelong = String()
+    var emoBelong = Emotion(id: 0,emotion_name: "",artwork_id: 0)
     
     var artworks = [ArtWork]()
     var filteredArtworks = [ArtWork]()
@@ -19,22 +19,33 @@ class ArtworkListViewController: UITableViewController,UISearchBarDelegate, UISe
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.artworks = [ArtWork.init( name:"Bush_Type_cast_2",imageUrl:"Bush_Type_cast_2",location:"Level G South Gallery"),
-            ArtWork.init( name:"Bush_Lampre",imageUrl:"Bush_Lampre",location:"Level G South Gallery")]
-    
+        SelectArtwork()
         self.filteredArtworks=[]
+        
         is_searching = false
         self.tableView.reloadData()
-        print("++++"+emoBelong)
+ 
     }
     
     
     override func viewWillAppear(animated: Bool) {
-      
-        
-
-          }
+    }
+    
+    func SelectArtwork(){
+      //  var allArtworks = [ArtWork]()
+        databody.fetchAllArtworks({ (allartworks) -> Void in
+            dispatch_async(dispatch_get_main_queue(), {
+                println("+++++++\(self.emoBelong.id)")
+      //          allArtworks = artworks
+                for artwork in allartworks{
+                    if(artwork.artwork_id == self.emoBelong.artwork_id){
+                   self.artworks.append(artwork)
+                    }
+                }
+                self.tableView.reloadData()
+            })
+            }, error: nil)
+    }
     
     
     
@@ -89,12 +100,13 @@ class ArtworkListViewController: UITableViewController,UISearchBarDelegate, UISe
             filteredArtworks = []
             for var index = 0; index < artworks.count; index++
             {
+                var artwork_id = artworks[index].artwork_id
                 var currentName = artworks[index].name
                 var currentimg = artworks[index].imageUrl
                 var currentDesc = artworks[index].location
                 if (currentName.lowercaseString.rangeOfString(searchText.lowercaseString)  != nil ){
                  
-                    filteredArtworks.append(ArtWork(name: currentName, imageUrl: currentimg, location: currentDesc))
+                    filteredArtworks.append(ArtWork(artwork_id:artwork_id, name: currentName, imageUrl: currentimg, location: currentDesc))
                     
                 }
             }
@@ -114,7 +126,7 @@ class ArtworkListViewController: UITableViewController,UISearchBarDelegate, UISe
         if segue.identifier == "artworkdetail" {
             if let destination = segue.destinationViewController as? ArtworkDetailViewController {
                 if let index = tableView.indexPathForSelectedRow()?.row {
-                   
+                    
                     destination.art = artworks[index]
                 }
             }

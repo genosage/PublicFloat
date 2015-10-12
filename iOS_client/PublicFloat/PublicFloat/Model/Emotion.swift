@@ -14,6 +14,11 @@ public class Emotion: NSObject {
     var emotion_name: String = ""
     var artwork_id: Int = 0
     
-  
+     init(id:Int, emotion_name: String,artwork_id: Int){
+        self.id = id
+        self.emotion_name = emotion_name
+        self.artwork_id = artwork_id
+      
+    }
     
 }

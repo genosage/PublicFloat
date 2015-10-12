@@ -22,10 +22,12 @@ public class ArtWork: NSObject {
     //didnot included in the schema
     var location: String = ""
     
-    init(name: String, imageUrl: String, location: String) {
+    init(artwork_id:Int, name: String, imageUrl: String, location: String) {
+        self.artwork_id = artwork_id
         self.name = name
         self.location = location
         self.imageUrl = imageUrl
     }
+    
     
 }

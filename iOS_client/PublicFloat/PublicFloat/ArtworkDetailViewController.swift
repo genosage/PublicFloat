@@ -12,16 +12,16 @@ import UIKit
 
 class ArtworkDetailViewController: UIViewController {
     
-    var art = ArtWork(name: " ", imageUrl: " ", location: " ")
+    var art = ArtWork(artwork_id:0, name: " ", imageUrl: " ", location: " ")
     
     @IBOutlet var descButton: UIButton!
     
     @IBOutlet var commButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+   
         var imageView : UIImageView = UIImageView(frame:CGRectMake(10, 50, 300, 300));
-                        imageView.image = UIImage(named:art.name)
+                        imageView.image = UIImage(named:art.imageUrl)
         
                         self.view.addSubview(imageView)
         
@@ -35,14 +35,24 @@ class ArtworkDetailViewController: UIViewController {
         
     }
     override func viewWillAppear(animated: Bool) {
-        
-        
+
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "tocomment" {
+            let viewController = segue.destinationViewController as! CommentView
+            
+            viewController.current_artwork = self.art
+        }
+        
+    }
+
+    
     
 //    @IBAction func close(segue: UIStoryboardSegue){
 //        if (segue.identifier == "testSegue"){
