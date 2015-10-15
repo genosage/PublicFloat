@@ -170,7 +170,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" id="Kw4-vB-8rq"/>
+                    <navigationItem key="navigationItem" id="Kw4-vB-8rq">
+                        <barButtonItem key="rightBarButtonItem" title="Share" id="J13-xK-wMH">
+                            <connections>
+                                <action selector="shareTapped:" destination="EGM-YC-g2O" id="5oh-aW-mc0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="commButton" destination="gbR-fa-DNi" id="lTE-F1-l09"/>
                         <outlet property="descButton" destination="VQW-ay-BaZ" id="aNp-aD-aaJ"/>
@@ -279,48 +285,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jyI-H5-kB6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1795" y="1028"/>
-        </scene>
-        <!--Comments-->
-        <scene sceneID="QNx-sh-X4s">
-            <objects>
-                <viewController id="bVe-vZ-sta" customClass="CommentViewController" customModule="PublicFloat" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="cYw-89-wzZ" customClass="UITableView">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Z9a-ox-OeY">
-                                <rect key="frame" x="0.0" y="20" width="320" height="510"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="chaicell" id="6O2-MI-y7A">
-                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6O2-MI-y7A" id="Ani-c6-YRu">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Comments" minimumFontSize="17" id="I4B-ep-7n3">
-                                <rect key="frame" x="16" y="533" width="288" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Comments" id="26t-37-ENp"/>
-                    <connections>
-                        <outlet property="comments" destination="I4B-ep-7n3" id="2xW-wd-YmC"/>
-                        <outlet property="tableView1" destination="Z9a-ox-OeY" id="Ksx-7W-Otm"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OpK-7J-O62" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2713" y="1912"/>
         </scene>
         <!--Comment View-->
         <scene sceneID="2Wf-gx-eRS">
@@ -512,6 +476,7 @@
         <!--View Controller-->
         <scene sceneID="EeW-X7-SsV">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1T0-fG-83N" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="RvS-g7-OlC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hik-Q4-TJH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -519,7 +484,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1T0-fG-83N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>

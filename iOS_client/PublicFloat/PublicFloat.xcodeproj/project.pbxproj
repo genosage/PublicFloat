@@ -28,7 +28,6 @@
 		795D684C1BCA65C100974F23 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 795D684B1BCA65C100974F23 /* Images.xcassets */; };
 		795DE8F21BC7655F00F02E82 /* GetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795DE8F11BC7655F00F02E82 /* GetData.swift */; };
 		7961CCDA1BCB076000771C96 /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7961CCD91BCB076000771C96 /* CommentView.swift */; };
-		7968EBE51BC4BA18005C5DEF /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7968EBE41BC4BA18005C5DEF /* CommentViewController.swift */; };
 		797AF8EA1BB45E36005C292A /* ArtworkMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797AF8E91BB45E36005C292A /* ArtworkMapViewController.swift */; };
 		797AF8EC1BB45EED005C292A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797AF8EB1BB45EED005C292A /* MapViewController.swift */; };
 		797AF8F01BB464B0005C292A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797AF8EF1BB464B0005C292A /* LoginViewController.swift */; };
@@ -79,7 +78,6 @@
 		795D684B1BCA65C100974F23 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = PublicFloat/Images.xcassets; sourceTree = "<group>"; };
 		795DE8F11BC7655F00F02E82 /* GetData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetData.swift; sourceTree = "<group>"; };
 		7961CCD91BCB076000771C96 /* CommentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
-		7968EBE41BC4BA18005C5DEF /* CommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
 		797AF8E91BB45E36005C292A /* ArtworkMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArtworkMapViewController.swift; path = PublicFloat/ArtworkMapViewController.swift; sourceTree = "<group>"; };
 		797AF8EB1BB45EED005C292A /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = PublicFloat/MapViewController.swift; sourceTree = "<group>"; };
 		797AF8EF1BB464B0005C292A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = PublicFloat/LoginViewController.swift; sourceTree = "<group>"; };
@@ -223,7 +221,6 @@
 				795D684B1BCA65C100974F23 /* Images.xcassets */,
 				7909F1071BB407230096C6F1 /* EmotionCell.swift */,
 				7951BE0D1BBBD4B100D34C69 /* InputViewController.swift */,
-				7968EBE41BC4BA18005C5DEF /* CommentViewController.swift */,
 				7961CCD91BCB076000771C96 /* CommentView.swift */,
 			);
 			name = View;
@@ -452,7 +449,6 @@
 				18D6004C1B9DA0F1007EE280 /* HTTPSessionManager.swift in Sources */,
 				797AF8EC1BB45EED005C292A /* MapViewController.swift in Sources */,
 				795DE8F21BC7655F00F02E82 /* GetData.swift in Sources */,
-				7968EBE51BC4BA18005C5DEF /* CommentViewController.swift in Sources */,
 				18C7F1E31B84955300D8DF44 /* AppDelegate.swift in Sources */,
 				18D6004F1B9DAF3C007EE280 /* ArtWork.swift in Sources */,
 				7951BE061BBB5F8700D34C69 /* Comment.swift in Sources */,

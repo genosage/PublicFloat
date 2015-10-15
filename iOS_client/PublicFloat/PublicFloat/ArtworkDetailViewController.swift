@@ -7,8 +7,8 @@
 //
 
 import Foundation
-
 import UIKit
+import Social
 
 class ArtworkDetailViewController: UIViewController {
     
@@ -17,6 +17,7 @@ class ArtworkDetailViewController: UIViewController {
     @IBOutlet var descButton: UIButton!
     
     @IBOutlet var commButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
    
@@ -53,13 +54,11 @@ class ArtworkDetailViewController: UIViewController {
     }
 
     
-    
-//    @IBAction func close(segue: UIStoryboardSegue){
-//        if (segue.identifier == "testSegue"){
-//            var vc = segue.sourceViewController as! ArtworkMapViewController
-//            commButton.setTitle(vc.testTextField.text, forState: .Normal)
-//        }
-//    }
-    
-    
+    @IBAction func shareTapped(sender: AnyObject) {
+        var controller: SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+        controller.setInitialText(art.name)
+        controller.addImage(UIImage(named: art.imageUrl))
+        self.presentViewController(controller, animated: true, completion: nil)
+    }
+
 }
