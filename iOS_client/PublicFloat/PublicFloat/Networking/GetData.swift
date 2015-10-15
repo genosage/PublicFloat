@@ -52,8 +52,8 @@ class GetData{
                     
                     var artwork_id = subJson["id"].int
                     var imageurl = subJson["image_url"].string
-                    var long = subJson["artwork_longtitude"].string
-                    var latt = subJson["artwork_latitude"].string
+                    var long = subJson["artwork_longtitude"].string!
+                    var latt = subJson["artwork_latitude"].string!
                     var ida = "artwork_longtitude: \(long) + artwork_latitude: \(latt)"
                     
                     artworks.append(ArtWork(artwork_id: artwork_id!, name: title, imageUrl: imageurl!, location: ida))

@@ -146,24 +146,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="VQW-ay-BaZ">
-                                <rect key="frame" x="137" y="352" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="JUb-bk-7Y3" kind="push" id="0HE-Cp-UsS"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gbR-fa-DNi" userLabel="comment">
-                                <rect key="frame" x="137" y="421" width="46" height="30"/>
+                                <rect key="frame" x="137" y="388" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="HEd-Pv-a15" kind="push" identifier="tocomment" id="gSL-7L-Dff"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="ADc-ZU-BNb">
+                                <rect key="frame" x="40" y="29" width="240" height="251"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="VQW-ay-BaZ">
+                                <rect key="frame" x="40" y="318" width="240" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="JUb-bk-7Y3" kind="push" id="0HE-Cp-UsS"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -178,8 +183,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="commButton" destination="gbR-fa-DNi" id="lTE-F1-l09"/>
-                        <outlet property="descButton" destination="VQW-ay-BaZ" id="aNp-aD-aaJ"/>
+                        <outlet property="commButton" destination="gbR-fa-DNi" id="4pC-n7-klf"/>
+                        <outlet property="descButton" destination="VQW-ay-BaZ" id="BG4-xD-77G"/>
+                        <outlet property="imageView" destination="ADc-ZU-BNb" id="Mza-gJ-5SF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zlk-6O-Vne" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -204,23 +210,12 @@
                                     <segue destination="3us-5a-WM7" kind="unwind" unwindAction="close:" id="SJh-vY-JeQ"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="dHA-Wj-AkL">
-                                <rect key="frame" x="94" y="472" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="hma-bP-cfa">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="PUp-h6-dDy"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="hma-bP-cfa"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="testTextField" destination="dHA-Wj-AkL" id="DqU-9X-K09"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DK9-Pl-Fvg" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="3us-5a-WM7" userLabel="Exit" sceneMemberID="exit"/>
@@ -473,19 +468,6 @@
             </objects>
             <point key="canvasLocation" x="1412.8" y="727.03999999999996"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="EeW-X7-SsV">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1T0-fG-83N" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="RvS-g7-OlC" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="hik-Q4-TJH">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-            </objects>
-        </scene>
     </scenes>
     <resources>
         <image name="home1" width="750" height="1334"/>
@@ -497,6 +479,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="XCl-w2-bJW"/>
+        <segue reference="YkM-mW-2L7"/>
     </inferredMetricsTieBreakers>
 </document>

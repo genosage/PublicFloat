@@ -14,29 +14,22 @@ class ArtworkDetailViewController: UIViewController {
     
     var art = ArtWork(artwork_id:0, name: " ", imageUrl: " ", location: " ")
     
-    @IBOutlet var descButton: UIButton!
+    @IBOutlet weak var imageView: UIImageView!
+
+    @IBOutlet weak var descButton: UIButton!
     
-    @IBOutlet var commButton: UIButton!
+    @IBOutlet weak var commButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-   
-        var imageView : UIImageView = UIImageView(frame:CGRectMake(10, 50, 300, 300));
-                        imageView.image = UIImage(named:art.imageUrl)
         
-                        self.view.addSubview(imageView)
-        
-        
-        descButton.frame = CGRectMake(10, 300, 300, 300)
-        descButton.setTitle("Location:   "+art.location, forState: .Normal)
-        
-        commButton.frame = CGRectMake(10, 330, 300, 300)
+        imageView.image = UIImage(named:art.imageUrl)
+        descButton.setTitle(art.location, forState: .Normal)
+        descButton.titleLabel?.lineBreakMode = NSLineBreakMode.ByWordWrapping
         commButton.setTitle("Comment", forState: .Normal)
-
+        commButton.sizeToFit()
         
-    }
-    override func viewWillAppear(animated: Bool) {
-
+        navigationItem.title = art.name
     }
     
     override func didReceiveMemoryWarning() {
