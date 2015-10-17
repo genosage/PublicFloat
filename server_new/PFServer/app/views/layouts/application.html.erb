@@ -1,14 +1,37 @@
+
+<!-- START:head -->
 <!DOCTYPE html>
 <html>
 <head>
-  <title>PFServer</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+  <!-- START_HIGHLIGHT -->
+  <title>Pragprog Books Online Store</title>
+  <!-- END_HIGHLIGHT -->
+  <%= stylesheet_link_tag    "application", media: "all" %><!-- <label id="code.slt"/> -->
+  <%= javascript_include_tag "application" %><!-- <label id="code.jlt"/> -->
+  <%= csrf_meta_tags %><!-- <label id="code.csrf"/> -->
 </head>
-<body>
-
-<%= yield %>
-
+<!-- END:head -->
+<body class="<%= controller.controller_name %>">
+<!-- START_HIGHLIGHT -->
+<div id="banner">
+  <%= image_tag("logo.png") %>
+  <%= @page_title || "Ian Potter Museum of Art" %><!-- <label id="code.depot.e.title"/> -->
+</div>
+<div id="columns">
+  <div id="side">
+    <ul>
+      <li><a href="http://0.0.0.0:3000/artworks">Home</a></li>
+      <li><a href="http://0.0.0.0:3000/artworks/new">Add Artwork</a></li>
+      <!--<li><a href="http://0.0.0.0:3000/artowrks">News</a></li>-->
+      <li><a href="http://0.0.0.0:3000/comments">Comments</a></li>
+    </ul>
+  </div>
+  <div id="main">
+    <!-- END_HIGHLIGHT -->
+    <%= yield %><!-- <label id="code.depot.e.include"/> -->
+    <!-- START_HIGHLIGHT -->
+  </div>
+</div>
+<!-- END_HIGHLIGHT -->
 </body>
 </html>
