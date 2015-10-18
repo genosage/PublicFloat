@@ -9,15 +9,26 @@
 /* Begin PBXBuildFile section */
 		18934E781BAB130100657490 /* NSObject+AWStubAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 18934E771BAB130100657490 /* NSObject+AWStubAdditions.m */; };
 		18C7F1E31B84955300D8DF44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C7F1E21B84955300D8DF44 /* AppDelegate.swift */; };
-		18C7F1E51B84955300D8DF44 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C7F1E41B84955300D8DF44 /* ViewController.swift */; };
-		18C7F1E81B84955300D8DF44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18C7F1E61B84955300D8DF44 /* Main.storyboard */; };
-		18C7F1EA1B84955300D8DF44 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18C7F1E91B84955300D8DF44 /* Images.xcassets */; };
 		18C7F1ED1B84955300D8DF44 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C7F1EB1B84955300D8DF44 /* LaunchScreen.xib */; };
 		18C7F1F91B84955300D8DF44 /* PublicFloatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C7F1F81B84955300D8DF44 /* PublicFloatTests.swift */; };
-		18D6004C1B9DA0F1007EE280 /* HTTPSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D6004B1B9DA0F1007EE280 /* HTTPSessionManager.swift */; };
 		18D6004F1B9DAF3C007EE280 /* ArtWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D6004E1B9DAF3C007EE280 /* ArtWork.swift */; };
-		18F565C61B98768C00A84DFA /* PFServerAPIStubs.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F565C51B98768C00A84DFA /* PFServerAPIStubs.m */; };
 		5FDEC63C480C933430220C6C /* Pods_PublicFloatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A956685C0083C5341E34F55B /* Pods_PublicFloatTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		7909F1081BB407230096C6F1 /* ArtworkListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7909F1041BB407230096C6F1 /* ArtworkListViewController.swift */; };
+		7909F1091BB407230096C6F1 /* EmotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7909F1051BB407230096C6F1 /* EmotionViewController.swift */; };
+		7909F10B1BB407230096C6F1 /* EmotionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7909F1071BB407230096C6F1 /* EmotionCell.swift */; };
+		7909F1101BB4245B0096C6F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7909F10E1BB4245B0096C6F1 /* Main.storyboard */; };
+		7909F1141BB429CC0096C6F1 /* ArtworkDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7909F1131BB429CC0096C6F1 /* ArtworkDetailViewController.swift */; };
+		7909F1161BB440E90096C6F1 /* 2.pic_hd.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7909F1151BB440E90096C6F1 /* 2.pic_hd.jpg */; };
+		7951BE041BBB5E4800D34C69 /* Emotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7951BE031BBB5E4800D34C69 /* Emotion.swift */; };
+		7951BE061BBB5F8700D34C69 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7951BE051BBB5F8700D34C69 /* Comment.swift */; };
+		7951BE081BBB5FFE00D34C69 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7951BE071BBB5FFE00D34C69 /* User.swift */; };
+		7951BE0E1BBBD4B100D34C69 /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7951BE0D1BBBD4B100D34C69 /* InputViewController.swift */; };
+		795D684C1BCA65C100974F23 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 795D684B1BCA65C100974F23 /* Images.xcassets */; };
+		795DE8F21BC7655F00F02E82 /* GetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795DE8F11BC7655F00F02E82 /* GetData.swift */; };
+		7961CCDA1BCB076000771C96 /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7961CCD91BCB076000771C96 /* CommentView.swift */; };
+		797AF8EA1BB45E36005C292A /* ArtworkMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797AF8E91BB45E36005C292A /* ArtworkMapViewController.swift */; };
+		797AF8EC1BB45EED005C292A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797AF8EB1BB45EED005C292A /* MapViewController.swift */; };
+		797AF8F01BB464B0005C292A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797AF8EF1BB464B0005C292A /* LoginViewController.swift */; };
 		BA42C625906CF704A66DA16A /* Pods_PublicFloat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40156B90B0C11FB5D2C48859 /* Pods_PublicFloat.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -38,23 +49,33 @@
 		18C7F1DD1B84955300D8DF44 /* PublicFloat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PublicFloat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18C7F1E11B84955300D8DF44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18C7F1E21B84955300D8DF44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		18C7F1E41B84955300D8DF44 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		18C7F1E71B84955300D8DF44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		18C7F1E91B84955300D8DF44 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		18C7F1EC1B84955300D8DF44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		18C7F1F21B84955300D8DF44 /* PublicFloatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PublicFloatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18C7F1F71B84955300D8DF44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18C7F1F81B84955300D8DF44 /* PublicFloatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicFloatTests.swift; sourceTree = "<group>"; };
-		18D6004B1B9DA0F1007EE280 /* HTTPSessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPSessionManager.swift; sourceTree = "<group>"; };
 		18D6004E1B9DAF3C007EE280 /* ArtWork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtWork.swift; sourceTree = "<group>"; };
 		18D600571B9DDEFA007EE280 /* PublicFloatTests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PublicFloatTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		18D600581B9DDF03007EE280 /* PublicFloat-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PublicFloat-Bridging-Header.h"; sourceTree = "<group>"; };
 		18D6005B1B9DE012007EE280 /* PublicFloatTestHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublicFloatTestHeader.h; sourceTree = "<group>"; };
-		18F565C41B98768C00A84DFA /* PFServerAPIStubs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFServerAPIStubs.h; sourceTree = "<group>"; };
-		18F565C51B98768C00A84DFA /* PFServerAPIStubs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFServerAPIStubs.m; sourceTree = "<group>"; };
 		2EEECC896E89A222E699BD9B /* Pods-PublicFloat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PublicFloat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PublicFloat/Pods-PublicFloat.debug.xcconfig"; sourceTree = "<group>"; };
 		40156B90B0C11FB5D2C48859 /* Pods_PublicFloat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PublicFloat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		571D1435F557D76C524A1EB2 /* Pods-PublicFloatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PublicFloatTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PublicFloatTests/Pods-PublicFloatTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7909F1041BB407230096C6F1 /* ArtworkListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArtworkListViewController.swift; path = PublicFloat/ArtworkListViewController.swift; sourceTree = "<group>"; };
+		7909F1051BB407230096C6F1 /* EmotionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmotionViewController.swift; path = PublicFloat/EmotionViewController.swift; sourceTree = "<group>"; };
+		7909F1071BB407230096C6F1 /* EmotionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmotionCell.swift; path = PublicFloat/EmotionCell.swift; sourceTree = "<group>"; };
+		7909F10F1BB4245B0096C6F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = PublicFloat/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7909F1131BB429CC0096C6F1 /* ArtworkDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArtworkDetailViewController.swift; path = PublicFloat/ArtworkDetailViewController.swift; sourceTree = "<group>"; };
+		7909F1151BB440E90096C6F1 /* 2.pic_hd.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.pic_hd.jpg; sourceTree = "<group>"; };
+		7951BE031BBB5E4800D34C69 /* Emotion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Emotion.swift; sourceTree = "<group>"; };
+		7951BE051BBB5F8700D34C69 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		7951BE071BBB5FFE00D34C69 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		7951BE0D1BBBD4B100D34C69 /* InputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
+		795D684B1BCA65C100974F23 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = PublicFloat/Images.xcassets; sourceTree = "<group>"; };
+		795DE8F11BC7655F00F02E82 /* GetData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetData.swift; sourceTree = "<group>"; };
+		7961CCD91BCB076000771C96 /* CommentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
+		797AF8E91BB45E36005C292A /* ArtworkMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArtworkMapViewController.swift; path = PublicFloat/ArtworkMapViewController.swift; sourceTree = "<group>"; };
+		797AF8EB1BB45EED005C292A /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = PublicFloat/MapViewController.swift; sourceTree = "<group>"; };
+		797AF8EF1BB464B0005C292A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = PublicFloat/LoginViewController.swift; sourceTree = "<group>"; };
 		82797EA8EE0F012FE48F39D4 /* Pods-PublicFloat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PublicFloat.release.xcconfig"; path = "Pods/Target Support Files/Pods-PublicFloat/Pods-PublicFloat.release.xcconfig"; sourceTree = "<group>"; };
 		A956685C0083C5341E34F55B /* Pods_PublicFloatTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PublicFloatTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -94,6 +115,7 @@
 				18C7F1F51B84955300D8DF44 /* PublicFloatTests */,
 				18C7F1DF1B84955300D8DF44 /* PublicFloat */,
 				18C7F1DE1B84955300D8DF44 /* Products */,
+				7909F1151BB440E90096C6F1 /* 2.pic_hd.jpg */,
 				B23E5CAFA0D09972A173F232 /* Pods */,
 				1F59D3C177AFCC3468159792 /* Frameworks */,
 			);
@@ -112,16 +134,12 @@
 			isa = PBXGroup;
 			children = (
 				18D600581B9DDF03007EE280 /* PublicFloat-Bridging-Header.h */,
+				7951BE021BBB5CA400D34C69 /* View */,
 				18D6004D1B9DAF2E007EE280 /* Model */,
 				18D6004A1B9DA0C9007EE280 /* Networking */,
 				18C7F1E21B84955300D8DF44 /* AppDelegate.swift */,
-				18C7F1E41B84955300D8DF44 /* ViewController.swift */,
-				18C7F1E61B84955300D8DF44 /* Main.storyboard */,
-				18C7F1E91B84955300D8DF44 /* Images.xcassets */,
 				18C7F1EB1B84955300D8DF44 /* LaunchScreen.xib */,
 				18C7F1E01B84955300D8DF44 /* Supporting Files */,
-				18F565C41B98768C00A84DFA /* PFServerAPIStubs.h */,
-				18F565C51B98768C00A84DFA /* PFServerAPIStubs.m */,
 			);
 			path = PublicFloat;
 			sourceTree = "<group>";
@@ -157,7 +175,7 @@
 		18D6004A1B9DA0C9007EE280 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				18D6004B1B9DA0F1007EE280 /* HTTPSessionManager.swift */,
+				795DE8F11BC7655F00F02E82 /* GetData.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -166,6 +184,9 @@
 			isa = PBXGroup;
 			children = (
 				18D6004E1B9DAF3C007EE280 /* ArtWork.swift */,
+				7951BE031BBB5E4800D34C69 /* Emotion.swift */,
+				7951BE051BBB5F8700D34C69 /* Comment.swift */,
+				7951BE071BBB5FFE00D34C69 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -177,6 +198,25 @@
 				A956685C0083C5341E34F55B /* Pods_PublicFloatTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7951BE021BBB5CA400D34C69 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7909F10E1BB4245B0096C6F1 /* Main.storyboard */,
+				7909F1131BB429CC0096C6F1 /* ArtworkDetailViewController.swift */,
+				797AF8E91BB45E36005C292A /* ArtworkMapViewController.swift */,
+				797AF8EB1BB45EED005C292A /* MapViewController.swift */,
+				797AF8EF1BB464B0005C292A /* LoginViewController.swift */,
+				7909F1041BB407230096C6F1 /* ArtworkListViewController.swift */,
+				7909F1051BB407230096C6F1 /* EmotionViewController.swift */,
+				795D684B1BCA65C100974F23 /* Images.xcassets */,
+				7909F1071BB407230096C6F1 /* EmotionCell.swift */,
+				7951BE0D1BBBD4B100D34C69 /* InputViewController.swift */,
+				7961CCD91BCB076000771C96 /* CommentView.swift */,
+			);
+			name = View;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		B23E5CAFA0D09972A173F232 /* Pods */ = {
@@ -277,9 +317,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18C7F1E81B84955300D8DF44 /* Main.storyboard in Resources */,
+				7909F1101BB4245B0096C6F1 /* Main.storyboard in Resources */,
+				795D684C1BCA65C100974F23 /* Images.xcassets in Resources */,
 				18C7F1ED1B84955300D8DF44 /* LaunchScreen.xib in Resources */,
-				18C7F1EA1B84955300D8DF44 /* Images.xcassets in Resources */,
+				7909F1161BB440E90096C6F1 /* 2.pic_hd.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,11 +431,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18C7F1E51B84955300D8DF44 /* ViewController.swift in Sources */,
-				18F565C61B98768C00A84DFA /* PFServerAPIStubs.m in Sources */,
-				18D6004C1B9DA0F1007EE280 /* HTTPSessionManager.swift in Sources */,
+				7961CCDA1BCB076000771C96 /* CommentView.swift in Sources */,
+				7909F1091BB407230096C6F1 /* EmotionViewController.swift in Sources */,
+				7909F1141BB429CC0096C6F1 /* ArtworkDetailViewController.swift in Sources */,
+				7951BE081BBB5FFE00D34C69 /* User.swift in Sources */,
+				7951BE0E1BBBD4B100D34C69 /* InputViewController.swift in Sources */,
+				797AF8EA1BB45E36005C292A /* ArtworkMapViewController.swift in Sources */,
+				797AF8EC1BB45EED005C292A /* MapViewController.swift in Sources */,
+				795DE8F21BC7655F00F02E82 /* GetData.swift in Sources */,
 				18C7F1E31B84955300D8DF44 /* AppDelegate.swift in Sources */,
 				18D6004F1B9DAF3C007EE280 /* ArtWork.swift in Sources */,
+				7951BE061BBB5F8700D34C69 /* Comment.swift in Sources */,
+				7909F1081BB407230096C6F1 /* ArtworkListViewController.swift in Sources */,
+				797AF8F01BB464B0005C292A /* LoginViewController.swift in Sources */,
+				7909F10B1BB407230096C6F1 /* EmotionCell.swift in Sources */,
+				7951BE041BBB5E4800D34C69 /* Emotion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,20 +469,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		18C7F1E61B84955300D8DF44 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				18C7F1E71B84955300D8DF44 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		18C7F1EB1B84955300D8DF44 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				18C7F1EC1B84955300D8DF44 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		7909F10E1BB4245B0096C6F1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7909F10F1BB4245B0096C6F1 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -528,6 +579,7 @@
 				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				INFOPLIST_FILE = PublicFloat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "PublicFloat/PublicFloat-Bridging-Header.h";
@@ -545,6 +597,7 @@
 				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				INFOPLIST_FILE = PublicFloat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "PublicFloat/PublicFloat-Bridging-Header.h";

@@ -10,11 +10,24 @@ import Foundation
 
 public class ArtWork: NSObject {
     
-    var id: String = ""
+    var artwork_id: Int = 0
     var name: String = ""
-    var desc: String = ""
+    var artwork_longtitude = 0
+    var artwork_latitude = 0
     var imageUrl: String = ""
+    var ibeaconuuid = ""
+
+    var title = ""
+    var discription = ""
+    //didnot included in the schema
+    var location: String = ""
     
+    init(artwork_id:Int, name: String, imageUrl: String, location: String) {
+        self.artwork_id = artwork_id
+        self.name = name
+        self.location = location
+        self.imageUrl = imageUrl
+    }
     
     
 }

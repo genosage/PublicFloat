@@ -55,15 +55,11 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'Pods-PublicFloat/AFNetworking.framework'
   install_framework 'Pods-PublicFloat/OHHTTPStubs.framework'
   install_framework 'Pods-PublicFloat/ObjectMapper.framework'
-  install_framework 'Pods-PublicFloat/RxCocoa.framework'
-  install_framework 'Pods-PublicFloat/RxSwift.framework'
   install_framework 'Pods-PublicFloat/SwiftyJSON.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'Pods-PublicFloat/AFNetworking.framework'
   install_framework 'Pods-PublicFloat/OHHTTPStubs.framework'
   install_framework 'Pods-PublicFloat/ObjectMapper.framework'
-  install_framework 'Pods-PublicFloat/RxCocoa.framework'
-  install_framework 'Pods-PublicFloat/RxSwift.framework'
   install_framework 'Pods-PublicFloat/SwiftyJSON.framework'
 fi
