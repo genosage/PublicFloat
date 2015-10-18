@@ -10,8 +10,8 @@ import UIKit
 import AFNetworking
 import OHHTTPStubs
 import ObjectMapper
-import RxCocoa
-import RxSwift
+//import RxCocoa
+//import RxSwift
 
 
 
@@ -41,25 +41,36 @@ class LoginViewController : UIViewController,UITextFieldDelegate {
     
     func postUser(){
         let manager = AFHTTPRequestOperationManager()
-        var user_params = ["user":["user_email":self.email.text]]
-        manager.POST( "http://localhost:3000/users/#new",
-            parameters: user_params,
+//        var user_params = ["user":["user_email":self.email.text]]
+//        manager.POST( "http://localhost:3000/users/#new",
+//            parameters: user_params,
+//            success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
+//                println("JSON: " + responseObject.description)
+//            },
+//            failure: { (operation: AFHTTPRequestOperation!,error: NSError!) in
+//                println("Error: " + error.localizedDescription)
+//        })
+        var param = ["user_email" : self.email.text! ];
+        manager.POST( "http://localhost:3000/users.json",
+            parameters: param,
             success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
-                println("JSON: " + responseObject.description)
+                print("JSON: " + responseObject.description)
+                self.navigationController?.popViewControllerAnimated(true)
             },
             failure: { (operation: AFHTTPRequestOperation!,error: NSError!) in
-                println("Error: " + error.localizedDescription)
+                print("Error: " + error.localizedDescription)
+                self.navigationController?.popViewControllerAnimated(true)
         })
     }
     
     func login(){
-        current_email=self.email.text
+        current_email=self.email.text!
         if (emailValidate(current_email)==true){
             user = AppDelegate.current_user
             user?.user_email = current_email
             self.performSegueWithIdentifier("userLoginSegue", sender: self)
-            println(user)
-            println("useremal::::\(user!.user_email)")
+            print(user)
+            print("useremal::::\(user!.user_email)")
             postUser()
             
         }else{
@@ -100,9 +111,9 @@ class LoginViewController : UIViewController,UITextFieldDelegate {
     
     
     //the function to control keyboard
-    override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
-        email.resignFirstResponder()
-    }
+//     func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
+//        email.resignFirstResponder()
+//    }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool
     {

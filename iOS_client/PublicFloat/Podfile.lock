@@ -1,67 +1,54 @@
 PODS:
-  - AFNetworking (2.6.0):
-    - AFNetworking/NSURLConnection (= 2.6.0)
-    - AFNetworking/NSURLSession (= 2.6.0)
-    - AFNetworking/Reachability (= 2.6.0)
-    - AFNetworking/Security (= 2.6.0)
-    - AFNetworking/Serialization (= 2.6.0)
-    - AFNetworking/UIKit (= 2.6.0)
-  - AFNetworking/NSURLConnection (2.6.0):
+  - AFNetworking (2.6.1):
+    - AFNetworking/NSURLConnection (= 2.6.1)
+    - AFNetworking/NSURLSession (= 2.6.1)
+    - AFNetworking/Reachability (= 2.6.1)
+    - AFNetworking/Security (= 2.6.1)
+    - AFNetworking/Serialization (= 2.6.1)
+    - AFNetworking/UIKit (= 2.6.1)
+  - AFNetworking/NSURLConnection (2.6.1):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/NSURLSession (2.6.0):
+  - AFNetworking/NSURLSession (2.6.1):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/Reachability (2.6.0)
-  - AFNetworking/Security (2.6.0)
-  - AFNetworking/Serialization (2.6.0)
-  - AFNetworking/UIKit (2.6.0):
+  - AFNetworking/Reachability (2.6.1)
+  - AFNetworking/Security (2.6.1)
+  - AFNetworking/Serialization (2.6.1)
+  - AFNetworking/UIKit (2.6.1):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - Kiwi (2.4.0)
-  - Nimble (1.0.0)
-  - ObjectMapper (0.15)
-  - OHHTTPStubs (4.2.0):
-    - OHHTTPStubs/Default (= 4.2.0)
-  - OHHTTPStubs/Core (4.2.0)
-  - OHHTTPStubs/Default (4.2.0):
+  - ObjectMapper (0.19)
+  - OHHTTPStubs (4.3.0):
+    - OHHTTPStubs/Default (= 4.3.0)
+  - OHHTTPStubs/Core (4.3.0)
+  - OHHTTPStubs/Default (4.3.0):
     - OHHTTPStubs/Core
     - OHHTTPStubs/JSON
     - OHHTTPStubs/NSURLSession
     - OHHTTPStubs/OHPathHelpers
-  - OHHTTPStubs/JSON (4.2.0):
+  - OHHTTPStubs/JSON (4.3.0):
     - OHHTTPStubs/Core
-  - OHHTTPStubs/NSURLSession (4.2.0):
+  - OHHTTPStubs/NSURLSession (4.3.0):
     - OHHTTPStubs/Core
-  - OHHTTPStubs/OHPathHelpers (4.2.0)
-  - Quick (0.3.1)
-  - RxCocoa (1.9.1):
-    - RxSwift (~> 1.0)
-  - RxSwift (1.9.1)
-  - SwiftyJSON (2.2.1)
+  - OHHTTPStubs/OHPathHelpers (4.3.0)
+  - SwiftyJSON (2.3.0)
 
 DEPENDENCIES:
   - AFNetworking
   - Kiwi
-  - Nimble (~> 1.0.0)
   - ObjectMapper
   - OHHTTPStubs
-  - Quick (~> 0.3.0)
-  - RxCocoa
-  - RxSwift
   - SwiftyJSON (~> 2.1)
 
 SPEC CHECKSUMS:
-  AFNetworking: 79f7eb1a0fcfa7beb409332b2ca49afe9ce53b05
+  AFNetworking: 8e4e60500beb8bec644cf575beee72990a76d399
   Kiwi: f49c9d54b28917df5928fe44968a39ed198cb8a8
-  Nimble: 8bee528e5fcc403653076545db562d2b5db7bb87
-  ObjectMapper: 0656dc1c155825897e5acfcd25362c6b61786dcb
-  OHHTTPStubs: f639130b83fb5f4f022d38f841141b0a6fa77249
-  Quick: 824572d3d198d51e52cf4aa722cebf7e59952a35
-  RxCocoa: b6665f77023bbdf428b92aa3338078e1e6bac39a
-  RxSwift: 546de2efb7f97f748f6c637d00846d4dd8600f62
-  SwiftyJSON: ae2d0a3d68025d136602a33c4ee215091ced3e33
+  ObjectMapper: a88114e5df20f055da63029f25cbc01014847c91
+  OHHTTPStubs: 0aec5755528693a165bd616cb79f69387de306a8
+  SwiftyJSON: 8d6b61a70277ef2a5d710d372e06e7e2d87fb9e4
 
 COCOAPODS: 0.38.2

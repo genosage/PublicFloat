@@ -26,7 +26,7 @@ class InputViewController: UIViewController,UITextFieldDelegate{
     }
     
     @IBAction func addComment(sender: UIButton) {
-        content = input_field.text
+        content = input_field.text!
         postComment()
 
 
@@ -51,11 +51,11 @@ class InputViewController: UIViewController,UITextFieldDelegate{
         manager.POST( "http://localhost:3000/comments.json",
             parameters: param,
             success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
-                println("JSON: " + responseObject.description)
+                print("JSON: " + responseObject.description)
                 self.navigationController?.popViewControllerAnimated(true)
             },
             failure: { (operation: AFHTTPRequestOperation!,error: NSError!) in
-                println("Error: " + error.localizedDescription)
+                print("Error: " + error.localizedDescription)
                 self.navigationController?.popViewControllerAnimated(true)
         })
     }

@@ -10,8 +10,7 @@ import UIKit
 import AFNetworking
 import OHHTTPStubs
 import ObjectMapper
-import RxCocoa
-import RxSwift
+
 
 class ArtworkMapViewController: UIViewController {
 

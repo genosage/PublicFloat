@@ -76,9 +76,9 @@ class EmotionViewController:  UITableViewController
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "artworkRelatedSegue" {
-            if let let viewController = segue.destinationViewController as? UITabBarController {
+            if let viewController = segue.destinationViewController as? UITabBarController {
                  let tableVC = viewController.viewControllers!.first as! ArtworkListViewController
-                if let index = tableView.indexPathForSelectedRow()?.row {
+                if let index = tableView.indexPathForSelectedRow?.row {
                     
                     tableVC.emoBelong = emotions[index]
                 }

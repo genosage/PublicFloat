@@ -1,18 +1,17 @@
-platform :ios, '8.0'
+platform :ios, '9.0'
 use_frameworks!
 
 target 'PublicFloat' do
   pod 'AFNetworking'
   pod 'SwiftyJSON', '~> 2.1'
   pod 'ObjectMapper'
-  pod 'RxSwift'
-  pod 'RxCocoa'
+
   pod 'OHHTTPStubs'
 end
 
 target 'PublicFloatTests' do
-    pod 'Quick', '~> 0.3.0'
-    pod 'Nimble', '~> 1.0.0'
+
+
     pod 'OHHTTPStubs'
     pod 'Kiwi'
 end

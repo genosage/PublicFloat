@@ -35,7 +35,7 @@ class ArtworkListViewController: UITableViewController,UISearchBarDelegate, UISe
       //  var allArtworks = [ArtWork]()
         databody.fetchAllArtworks({ (allartworks) -> Void in
             dispatch_async(dispatch_get_main_queue(), {
-                println("+++++++\(self.emoBelong.id)")
+                print("+++++++\(self.emoBelong.id)")
       //          allArtworks = artworks
                 for artwork in allartworks{
                     if(artwork.artwork_id == self.emoBelong.artwork_id){
@@ -91,7 +91,7 @@ class ArtworkListViewController: UITableViewController,UISearchBarDelegate, UISe
 
     
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String){
-        if searchBar.text.isEmpty{
+        if searchBar.text!.isEmpty{
             is_searching = false
             self.tableView.reloadData()
         } else {
@@ -100,7 +100,7 @@ class ArtworkListViewController: UITableViewController,UISearchBarDelegate, UISe
             filteredArtworks = []
             for var index = 0; index < artworks.count; index++
             {
-                var artwork_id = artworks[index].artwork_id
+                let artwork_id = artworks[index].artwork_id
                 var currentName = artworks[index].name
                 var currentimg = artworks[index].imageUrl
                 var currentDesc = artworks[index].location
@@ -115,7 +115,7 @@ class ArtworkListViewController: UITableViewController,UISearchBarDelegate, UISe
             tableView.reloadData()
         }
 
-
+    
 
     //fort the detail view
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -124,10 +124,11 @@ class ArtworkListViewController: UITableViewController,UISearchBarDelegate, UISe
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "artworkdetail" {
+            
             if let destination = segue.destinationViewController as? ArtworkDetailViewController {
-                if let index = tableView.indexPathForSelectedRow()?.row {
-                    
-                    destination.art = artworks[index]
+                let index = tableView.indexPathForSelectedRow?.row
+                if  index != nil{
+                    destination.art = artworks[index!]
                 }
             }
         }

@@ -53,3 +53,13 @@ Artwork.create(name:'Scaria Camel and the needle',description:'Scaria Camel and 
                title:'Scaria Camel and the needle',image_url:"Scaria_Camel_and_the_needle_1.png",ibeaconuuid: 15)
 Artwork.create(name:'Baker Kalaya Tjukurpa',description:'Baker Kalaya Tjukurpa',artwork_longtitude:16,artwork_latitude:16 ,
                title:'Baker Kalaya Tjukurpa',image_url:"Baker_Kalaya_Tjukurpa_1.png",ibeaconuuid: 16)
+
+Comment.create(user_id:1, artwork_id:1, comment:"Great!")
+Comment.create(user_id:1, artwork_id:2, comment:"Hi!")
+Comment.create(user_id:1, artwork_id:3, comment:"Brilientant!")
+Comment.create(user_id:1, artwork_id:4, comment:"Comemnt is annoying!")
+Comment.create(user_id:1, artwork_id:5, comment:"What I say!")
+Comment.create(user_id:1, artwork_id:5, comment:"HEHE!")
+Comment.create(user_id:1, artwork_id:6, comment:"What is this!")
+
+User.create(user_email: "s@s.com")

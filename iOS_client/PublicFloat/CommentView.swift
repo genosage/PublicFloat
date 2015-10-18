@@ -25,7 +25,7 @@ class CommentView: UITableViewController{
             dispatch_async(dispatch_get_main_queue(), {
                 self.comments.removeAll(keepCapacity: true)
                 for comment in allcomment{
-                    println(comment.artwork_id)
+                    print(comment.artwork_id)
                     if(comment.artwork_id == self.current_artwork.artwork_id){
                      
                         self.comments.append(comment)
@@ -48,7 +48,6 @@ class CommentView: UITableViewController{
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-      println(comments.count)
         return comments.count  //Currently Giving default Value
         
     }

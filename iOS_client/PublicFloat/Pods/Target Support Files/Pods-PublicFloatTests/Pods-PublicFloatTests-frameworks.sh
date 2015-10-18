@@ -54,12 +54,8 @@ code_sign_if_enabled() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'Pods-PublicFloatTests/OHHTTPStubs.framework'
   install_framework 'Pods-PublicFloatTests/Kiwi.framework'
-  install_framework 'Pods-PublicFloatTests/Nimble.framework'
-  install_framework 'Pods-PublicFloatTests/Quick.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'Pods-PublicFloatTests/OHHTTPStubs.framework'
   install_framework 'Pods-PublicFloatTests/Kiwi.framework'
-  install_framework 'Pods-PublicFloatTests/Nimble.framework'
-  install_framework 'Pods-PublicFloatTests/Quick.framework'
 fi
