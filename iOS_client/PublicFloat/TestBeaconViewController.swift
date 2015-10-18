@@ -9,16 +9,15 @@
 import Foundation
 import UIKit
 
-class TestBeaconViewController: UIViewController,ESTBeaconManagerDelegate {
+class TestBeaconViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, ESTBeaconManagerDelegate {
     
-    @IBOutlet weak var label: UILabel!
-    
-    @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var table: UITableView!
     
     let beaconManager = ESTBeaconManager()
     let beaconRegion = CLBeaconRegion(
         proximityUUID: NSUUID(UUIDString: "8492E75F-4FD6-469D-B132-043FE94921D8")!,
         identifier: "ranged region")
+    var beacon : [String] = []
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -34,19 +33,34 @@ class TestBeaconViewController: UIViewController,ESTBeaconManagerDelegate {
         super.viewDidLoad()
         self.beaconManager.delegate = self
         self.beaconManager.requestAlwaysAuthorization()
-        label.text = "0"
+        table.dataSource = self
+        table.delegate = self
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    func beaconManager(manager: AnyObject, didRangeBeacons beacons: [CLBeacon], inRegion region: CLBeaconRegion) {
-        if label.text != String(beacons.count){
-            label.text = String(beacons.count)
-            textView.text = ""
-            for i in beacons{
-                textView.text.appendContentsOf(i.description)
-            }
-        }
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+        return beacon.count
+    }
+
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
+        let cell = table.dequeueReusableCellWithIdentifier("beaconCell")! as UITableViewCell
         
+        var desc = cell.viewWithTag(101) as! UILabel
+        
+        desc.text = beacon[indexPath.row]
+        
+        return cell
+        
+    }
+    
+    func beaconManager(manager: AnyObject, didRangeBeacons beacons: [CLBeacon], inRegion region: CLBeaconRegion) {
+        if beacon.count != beacons.count{
+            beacon = [String]()
+            for i in beacons{
+                beacon.append(i.description as! String)
+            }
+            table.reloadData()
+        }
     }
     
     override func didReceiveMemoryWarning() {
