@@ -137,7 +137,7 @@
                                 <rect key="frame" x="0.0" y="66" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pW1-bK-YGO" id="gpP-ws-zqy">
-                                    <rect key="frame" x="0.0" y="0.0" width="287" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -362,7 +362,7 @@
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DTR-4u-FEg" id="E48-au-bAj">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -471,7 +471,7 @@
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6d6-2A-9dD" id="TcV-K1-oBQ">
-                                    <rect key="frame" x="0.0" y="0.0" width="287" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JpG-KA-7oV">
@@ -512,7 +512,13 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Emotion" id="L2s-2L-psf" userLabel="Emotion"/>
+                    <navigationItem key="navigationItem" title="Emotion" id="L2s-2L-psf" userLabel="Emotion">
+                        <barButtonItem key="rightBarButtonItem" title="TestBeacon" id="GEx-Eq-P0I">
+                            <connections>
+                                <segue destination="WgP-Fr-2DM" kind="push" id="5j1-IT-iAI"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5s2-cn-ao3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -525,6 +531,53 @@
                 </navigationBar>
             </objects>
             <point key="canvasLocation" x="1410.1333333333332" y="26.506666666666668"/>
+        </scene>
+        <!--Test Beacon View Controller-->
+        <scene sceneID="H08-oY-ktc">
+            <objects>
+                <viewController id="WgP-Fr-2DM" customClass="TestBeaconViewController" customModule="PublicFloat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ep2-h9-TOy"/>
+                        <viewControllerLayoutGuide type="bottom" id="pjN-J2-z9f"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kSt-gD-ghr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hoA-17-Wvj">
+                                <rect key="frame" x="139" y="260" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="bCh-XH-eHg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tLX-BJ-UN9">
+                                <rect key="frame" x="40" y="296" width="240" height="128"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hoA-17-Wvj" firstAttribute="centerX" secondItem="kSt-gD-ghr" secondAttribute="centerX" id="AsV-eO-FeX"/>
+                            <constraint firstItem="tLX-BJ-UN9" firstAttribute="leading" secondItem="kSt-gD-ghr" secondAttribute="leadingMargin" constant="24" id="Ogr-GF-gpX"/>
+                            <constraint firstItem="tLX-BJ-UN9" firstAttribute="top" secondItem="hoA-17-Wvj" secondAttribute="bottom" constant="15" id="QVy-Wo-pZU"/>
+                            <constraint firstItem="pjN-J2-z9f" firstAttribute="top" secondItem="tLX-BJ-UN9" secondAttribute="bottom" constant="100" id="U4R-jq-z5A"/>
+                            <constraint firstItem="tLX-BJ-UN9" firstAttribute="centerX" secondItem="hoA-17-Wvj" secondAttribute="centerX" id="VVi-o0-qJD"/>
+                            <constraint firstItem="hoA-17-Wvj" firstAttribute="top" secondItem="Ep2-h9-TOy" secondAttribute="bottom" constant="196" id="wDi-Na-Tfl"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ai2-aD-c48"/>
+                    <connections>
+                        <outlet property="label" destination="hoA-17-Wvj" id="cra-0W-VJ8"/>
+                        <outlet property="textView" destination="tLX-BJ-UN9" id="7L6-Ug-FEu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JyX-bN-Cud" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1797" y="-318"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="G1W-2q-VOy">
