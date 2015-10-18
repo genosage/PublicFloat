@@ -15,19 +15,18 @@ class ArtworkDetailViewController: UIViewController {
     var art = ArtWork(artwork_id:0, name: " ", imageUrl: " ", location: " ")
     
     @IBOutlet weak var imageView: UIImageView!
-
-    @IBOutlet weak var descButton: UIButton!
     
-    @IBOutlet weak var commButton: UIButton!
+    @IBOutlet weak var descButt: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         imageView.image = UIImage(named:art.imageUrl)
-        descButton.setTitle(art.location, forState: .Normal)
-        descButton.titleLabel?.lineBreakMode = NSLineBreakMode.ByWordWrapping
-        commButton.setTitle("Comment", forState: .Normal)
-        commButton.sizeToFit()
+        
+        descButt.setTitle(art.location, forState: .Normal)
+        
+        //descButt.titleLabel?.lineBreakMode = NSLineBreakMode.ByWordWrapping
+        //commButt.setTitle("Comment", forState: .Normal)
         
         navigationItem.title = art.name
     }

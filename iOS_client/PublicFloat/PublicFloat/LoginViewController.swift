@@ -10,10 +10,6 @@ import UIKit
 import AFNetworking
 import OHHTTPStubs
 import ObjectMapper
-//import RxCocoa
-//import RxSwift
-
-
 
 class LoginViewController : UIViewController,UITextFieldDelegate {
     
@@ -41,15 +37,6 @@ class LoginViewController : UIViewController,UITextFieldDelegate {
     
     func postUser(){
         let manager = AFHTTPRequestOperationManager()
-//        var user_params = ["user":["user_email":self.email.text]]
-//        manager.POST( "http://localhost:3000/users/#new",
-//            parameters: user_params,
-//            success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
-//                println("JSON: " + responseObject.description)
-//            },
-//            failure: { (operation: AFHTTPRequestOperation!,error: NSError!) in
-//                println("Error: " + error.localizedDescription)
-//        })
         var param = ["user_email" : self.email.text! ];
         manager.POST( "http://localhost:3000/users.json",
             parameters: param,
@@ -107,13 +94,10 @@ class LoginViewController : UIViewController,UITextFieldDelegate {
         self.presentViewController(alertController, animated: true, completion: nil)
     }
     
-    
-    
-    
     //the function to control keyboard
-//     func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
-//        email.resignFirstResponder()
-//    }
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        email.resignFirstResponder()
+    }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool
     {
