@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+var artwork = [("Col du Galibier","Bush_Col_du_Galibier_1",1234),("the great went","Bush_My_name_is_the_great_went_1",3059)]
+
 class TestBeaconViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, ESTBeaconManagerDelegate {
     
     @IBOutlet weak var table: UITableView!
@@ -17,7 +19,7 @@ class TestBeaconViewController: UIViewController, UITableViewDataSource, UITable
     let beaconRegion = CLBeaconRegion(
         proximityUUID: NSUUID(UUIDString: "8492E75F-4FD6-469D-B132-043FE94921D8")!,
         identifier: "ranged region")
-    var beacon : [String] = []
+    var beacon : [CLBeacon] = []
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -45,22 +47,26 @@ class TestBeaconViewController: UIViewController, UITableViewDataSource, UITable
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         let cell = table.dequeueReusableCellWithIdentifier("beaconCell")! as UITableViewCell
         
-        var desc = cell.viewWithTag(101) as! UILabel
+        var image = cell.viewWithTag(101) as! UIImageView
+        var title = cell.viewWithTag(102) as! UILabel
         
-        desc.text = beacon[indexPath.row]
+        image.image = UIImage(named: artwork[indexPath.row].1)
+        title.text = artwork[indexPath.row].0
         
         return cell
         
     }
     
     func beaconManager(manager: AnyObject, didRangeBeacons beacons: [CLBeacon], inRegion region: CLBeaconRegion) {
-        if beacon.count != beacons.count{
-            beacon = [String]()
-            for i in beacons{
-                beacon.append(i.description as! String)
+        beacon = beacons
+        if beacons.count != 0{
+            if Int((beacons.first!.major)) != artwork[0].2{
+                let art = artwork[0]
+                artwork[0] = artwork[1]
+                artwork[1] = art
             }
-            table.reloadData()
         }
+        table.reloadData()
     }
     
     override func didReceiveMemoryWarning() {
