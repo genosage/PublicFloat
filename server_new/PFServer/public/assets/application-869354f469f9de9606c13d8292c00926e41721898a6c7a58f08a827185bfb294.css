@@ -1,0 +1,200 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will
+ * include all the files listed below.
+ * 
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets,
+ * vendor/assets/stylesheets, or vendor/assets/stylesheets of plugins, if any,
+ * can be referenced here using a relative path.
+ * 
+ * You're free to add application-wide styles to this file and they'll appear
+ * at the top of the compiled file, but it's generally better to create a new
+ * file per style scope.
+ * 
+
+
+ */
+/* START_HIGHLIGHT */
+/* line 19, /Users/albertwang/Documents/MasterStudy/2015_semester2/90014_MasterSemesterLongProject/PublicFloat-Yellow/server_new/PFServer/app/assets/stylesheets/application.scss */
+#banner {
+  background: #9c9;
+  padding: 10px;
+  border-bottom: 2px solid;
+  font: small-caps 40px/40px "Times New Roman", serif;
+  color: #c69;
+  text-align: center;
+}
+/* line 27, /Users/albertwang/Documents/MasterStudy/2015_semester2/90014_MasterSemesterLongProject/PublicFloat-Yellow/server_new/PFServer/app/assets/stylesheets/application.scss */
+#banner img {
+  float: left;
+}
+
+/* line 32, /Users/albertwang/Documents/MasterStudy/2015_semester2/90014_MasterSemesterLongProject/PublicFloat-Yellow/server_new/PFServer/app/assets/stylesheets/application.scss */
+#notice {
+  color: #000 !important;
+  border: 1px solid red;
+  padding: 1em;
+  margin-bottom: 2em;
+  background-color: #f0f0f0;
+  font: bold smaller sans-serif;
+}
+
+/* line 41, /Users/albertwang/Documents/MasterStudy/2015_semester2/90014_MasterSemesterLongProject/PublicFloat-Yellow/server_new/PFServer/app/assets/stylesheets/application.scss */
+#columns {
+  background: #699;
+}
+/* line 44, /Users/albertwang/Documents/MasterStudy/2015_semester2/90014_MasterSemesterLongProject/PublicFloat-Yellow/server_new/PFServer/app/assets/stylesheets/application.scss */
+#columns #main {
+  margin-left: 17em;
+  padding: 1em;
+  background: white;
+}
+/* line 50, /Users/albertwang/Documents/MasterStudy/2015_semester2/90014_MasterSemesterLongProject/PublicFloat-Yellow/server_new/PFServer/app/assets/stylesheets/application.scss */
+#columns #side {
+  float: left;
+  padding: 1em 2em;
+  width: 13em;
+  background: #699;
+}
+/* line 56, /Users/albertwang/Documents/MasterStudy/2015_semester2/90014_MasterSemesterLongProject/PublicFloat-Yellow/server_new/PFServer/app/assets/stylesheets/application.scss */
+#columns #side ul {
+  padding: 0;
+}
+/* line 58, /Users/albertwang/Documents/MasterStudy/2015_semester2/90014_MasterSemesterLongProject/PublicFloat-Yellow/server_new/PFServer/app/assets/stylesheets/application.scss */
+#columns #side ul li {
+  list-style: none;
+}
+/* line 60, /Users/albertwang/Documents/MasterStudy/2015_semester2/90014_MasterSemesterLongProject/PublicFloat-Yellow/server_new/PFServer/app/assets/stylesheets/application.scss */
+#columns #side ul li a {
+  color: #bfb;
+  font-size: small;
+}
+
+/* END_HIGHLIGHT */
+/* START_HIGHLIGHT */
+/* line 7, /Users/albertwang/Documents/MasterStudy/2015_semester2/90014_MasterSemesterLongProject/PublicFloat-Yellow/server_new/PFServer/app/assets/stylesheets/artworks.scss */
+.artworks table {
+  border-collapse: collapse;
+}
+/* line 11, /Users/albertwang/Documents/MasterStudy/2015_semester2/90014_MasterSemesterLongProject/PublicFloat-Yellow/server_new/PFServer/app/assets/stylesheets/artworks.scss */
+.artworks table tr td {
+  padding: 5px;
+  vertical-align: top;
+}
+/* line 16, /Users/albertwang/Documents/MasterStudy/2015_semester2/90014_MasterSemesterLongProject/PublicFloat-Yellow/server_new/PFServer/app/assets/stylesheets/artworks.scss */
+.artworks .list_image {
+  width: 60px;
+  height: 70px;
+}
+/* line 21, /Users/albertwang/Documents/MasterStudy/2015_semester2/90014_MasterSemesterLongProject/PublicFloat-Yellow/server_new/PFServer/app/assets/stylesheets/artworks.scss */
+.artworks .list_description {
+  width: 60%;
+}
+/* line 24, /Users/albertwang/Documents/MasterStudy/2015_semester2/90014_MasterSemesterLongProject/PublicFloat-Yellow/server_new/PFServer/app/assets/stylesheets/artworks.scss */
+.artworks .list_description dl {
+  margin: 0;
+}
+/* line 28, /Users/albertwang/Documents/MasterStudy/2015_semester2/90014_MasterSemesterLongProject/PublicFloat-Yellow/server_new/PFServer/app/assets/stylesheets/artworks.scss */
+.artworks .list_description dt {
+  color: #244;
+  font-weight: bold;
+  font-size: larger;
+}
+/* line 34, /Users/albertwang/Documents/MasterStudy/2015_semester2/90014_MasterSemesterLongProject/PublicFloat-Yellow/server_new/PFServer/app/assets/stylesheets/artworks.scss */
+.artworks .list_description dd {
+  margin: 0;
+}
+/* line 39, /Users/albertwang/Documents/MasterStudy/2015_semester2/90014_MasterSemesterLongProject/PublicFloat-Yellow/server_new/PFServer/app/assets/stylesheets/artworks.scss */
+.artworks .list_actions {
+  font-size: x-small;
+  text-align: right;
+  padding-left: 1em;
+}
+/* line 45, /Users/albertwang/Documents/MasterStudy/2015_semester2/90014_MasterSemesterLongProject/PublicFloat-Yellow/server_new/PFServer/app/assets/stylesheets/artworks.scss */
+.artworks .list_line_even {
+  background: #e0f8f8;
+}
+/* line 48, /Users/albertwang/Documents/MasterStudy/2015_semester2/90014_MasterSemesterLongProject/PublicFloat-Yellow/server_new/PFServer/app/assets/stylesheets/artworks.scss */
+.artworks .list_line_odd {
+  background: #f8b0f8;
+}
+
+/* END_HIGHLIGHT */
+/* line 1, /Users/albertwang/Documents/MasterStudy/2015_semester2/90014_MasterSemesterLongProject/PublicFloat-Yellow/server_new/PFServer/app/assets/stylesheets/scaffolds.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 9, /Users/albertwang/Documents/MasterStudy/2015_semester2/90014_MasterSemesterLongProject/PublicFloat-Yellow/server_new/PFServer/app/assets/stylesheets/scaffolds.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 15, /Users/albertwang/Documents/MasterStudy/2015_semester2/90014_MasterSemesterLongProject/PublicFloat-Yellow/server_new/PFServer/app/assets/stylesheets/scaffolds.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 21, /Users/albertwang/Documents/MasterStudy/2015_semester2/90014_MasterSemesterLongProject/PublicFloat-Yellow/server_new/PFServer/app/assets/stylesheets/scaffolds.scss */
+a {
+  color: #000;
+}
+/* line 24, /Users/albertwang/Documents/MasterStudy/2015_semester2/90014_MasterSemesterLongProject/PublicFloat-Yellow/server_new/PFServer/app/assets/stylesheets/scaffolds.scss */
+a:visited {
+  color: #666;
+}
+/* line 28, /Users/albertwang/Documents/MasterStudy/2015_semester2/90014_MasterSemesterLongProject/PublicFloat-Yellow/server_new/PFServer/app/assets/stylesheets/scaffolds.scss */
+a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 35, /Users/albertwang/Documents/MasterStudy/2015_semester2/90014_MasterSemesterLongProject/PublicFloat-Yellow/server_new/PFServer/app/assets/stylesheets/scaffolds.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 40, /Users/albertwang/Documents/MasterStudy/2015_semester2/90014_MasterSemesterLongProject/PublicFloat-Yellow/server_new/PFServer/app/assets/stylesheets/scaffolds.scss */
+#notice {
+  color: green;
+}
+
+/* line 44, /Users/albertwang/Documents/MasterStudy/2015_semester2/90014_MasterSemesterLongProject/PublicFloat-Yellow/server_new/PFServer/app/assets/stylesheets/scaffolds.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 50, /Users/albertwang/Documents/MasterStudy/2015_semester2/90014_MasterSemesterLongProject/PublicFloat-Yellow/server_new/PFServer/app/assets/stylesheets/scaffolds.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 58, /Users/albertwang/Documents/MasterStudy/2015_semester2/90014_MasterSemesterLongProject/PublicFloat-Yellow/server_new/PFServer/app/assets/stylesheets/scaffolds.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 69, /Users/albertwang/Documents/MasterStudy/2015_semester2/90014_MasterSemesterLongProject/PublicFloat-Yellow/server_new/PFServer/app/assets/stylesheets/scaffolds.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
