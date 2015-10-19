@@ -32,11 +32,8 @@ class ArtworkListViewController: UITableViewController,UISearchBarDelegate, UISe
     }
     
     func SelectArtwork(){
-      //  var allArtworks = [ArtWork]()
         databody.fetchAllArtworks({ (allartworks) -> Void in
             dispatch_async(dispatch_get_main_queue(), {
-                print("+++++++\(self.emoBelong.id)")
-      //          allArtworks = artworks
                 for artwork in allartworks{
                     if(artwork.artwork_id == self.emoBelong.artwork_id){
                    self.artworks.append(artwork)
