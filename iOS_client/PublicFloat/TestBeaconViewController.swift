@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-var artwork = [("Col du Galibier","Bush_Col_du_Galibier_1",1234),("the great went","Bush_My_name_is_the_great_went_1",3059)]
+var artwork = [("Col du Galibier","Bush_Col_du_Galibier_1",1729,"artwork_longtitude : 1.0 + artwork_latitude : 1.0"),("the great went","Bush_My_name_is_the_great_went_1",3059,"artwork_longtitude : 5.0 + artwork_latitude : 5.0")]
 
 class TestBeaconViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, ESTBeaconManagerDelegate {
     
@@ -67,6 +67,20 @@ class TestBeaconViewController: UIViewController, UITableViewDataSource, UITable
             }
         }
         table.reloadData()
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "beaconDetail" {
+            
+            if let destination = segue.destinationViewController as? ArtworkDetailViewController {
+                let index = table.indexPathForSelectedRow?.row
+                if  index != nil{
+                    destination.art.name = artwork[index!].0
+                    destination.art.imageUrl = artwork[index!].1
+                    destination.art.location = artwork[index!].3
+                }
+            }
+        }
     }
     
     override func didReceiveMemoryWarning() {
