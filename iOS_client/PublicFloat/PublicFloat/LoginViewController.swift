@@ -12,10 +12,7 @@ import OHHTTPStubs
 import ObjectMapper
 
 class LoginViewController : UIViewController,UITextFieldDelegate {
-    
-  var current_user:User?
-    var user:User?
-    
+
     @IBOutlet var email: UITextField!
     
     var current_email = ""
@@ -37,27 +34,27 @@ class LoginViewController : UIViewController,UITextFieldDelegate {
     
     func postUser(){
         let manager = AFHTTPRequestOperationManager()
-        var param = ["user_email" : self.email.text! ];
-        manager.POST( "http://localhost:3000/users.json",
+        
+        let param = ["user" : ["user_email":email.text!] ]
+        
+        manager.POST( "https://still-scrubland-2068.herokuapp.com/users.json",
             parameters: param,
             success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
                 print("JSON: " + responseObject.description)
-                self.navigationController?.popViewControllerAnimated(true)
+                
             },
             failure: { (operation: AFHTTPRequestOperation!,error: NSError!) in
                 print("Error: " + error.localizedDescription)
-                self.navigationController?.popViewControllerAnimated(true)
+                
         })
     }
     
     func login(){
         current_email=self.email.text!
         if (emailValidate(current_email)==true){
-            user = AppDelegate.current_user
-            user?.user_email = current_email
+            
             self.performSegueWithIdentifier("userLoginSegue", sender: self)
-            print(user)
-            print("useremal::::\(user!.user_email)")
+            
             postUser()
             
         }else{
@@ -74,17 +71,25 @@ class LoginViewController : UIViewController,UITextFieldDelegate {
     }
     
     
-    //transfer information to next pages
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
-    {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
         if segue.identifier == "userLoginSegue"
         {
             let viewController = segue.destinationViewController as! UINavigationController
             
             let tableVC = viewController.viewControllers.first as! EmotionViewController
-            current_user = self.user
+            
+            tableVC.current_email = self.current_email
+        }
+        if segue.identifier == "Skip" {
+            let viewController = segue.destinationViewController as! UINavigationController
+            
+            let tableVC = viewController.viewControllers.first as! EmotionViewController
+            
+            tableVC.current_email = ""
         }
     }
+    
     
     func showAlert()
     {

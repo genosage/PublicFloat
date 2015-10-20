@@ -12,6 +12,8 @@ import Social
 
 class ArtworkDetailViewController: UIViewController {
     
+    var emo = Emotion(id: 0,emotion_name: "",artwork_id: 0)
+    
     var art = ArtWork(artwork_id:0, name: " ", imageUrl: " ", location: " ")
     
     @IBOutlet weak var imageView: UIImageView!
@@ -38,9 +40,10 @@ class ArtworkDetailViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "tocomment" {
-            let viewController = segue.destinationViewController as! CommentView
+            let viewController = segue.destinationViewController as! CommentViewController
             
             viewController.current_artwork = self.art
+             viewController.emo = self.emo
         }
         
     }

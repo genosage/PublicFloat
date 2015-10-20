@@ -12,7 +12,8 @@ import AFNetworking
 
 class InputViewController: UIViewController,UITextFieldDelegate{
     
-  
+    var emo = Emotion(id: 0,emotion_name: "",artwork_id: 0)
+
     var current_artwork = ArtWork(artwork_id:0, name: " ", imageUrl: " ", location: " ")
     
     @IBOutlet var input_field: UITextField!
@@ -21,34 +22,52 @@ class InputViewController: UIViewController,UITextFieldDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        input_field.attributedPlaceholder =
+            NSAttributedString(string: "#\(emo.emotion_name)#", attributes:[NSForegroundColorAttributeName : UIColor.grayColor()])
         
     }
     
     @IBAction func addComment(sender: UIButton) {
         content = input_field.text!
+        checkContent(content)
         postComment()
-
-
+        
     }
     
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-//        if segue.identifier == "done" {
-//            
-//            if   var destViewController = segue.destinationViewController as? CommentView{
-//             //   destViewController.newC =
-//            }
-//          
-//        }
-//    }
+    func checkContent(content:String){
+        if(content.containsString("#")){
+            var c = content.componentsSeparatedByString("#")
+            
+            if(c[1] != emo.emotion_name){
+                createRelateEmotion(c[1])
+            }
+        }
+    }
+    
+    func createRelateEmotion(emotiwo:String){
+        let manager = AFHTTPRequestOperationManager()
+        //"emotion_name":"Curiosity","artwork_id":3
+        
+        let param = ["emotion":["emotion_name": emotiwo, "artwork_id" : NSNumber(integer: current_artwork.artwork_id)]]
+        
+        manager.POST( "https://still-scrubland-2068.herokuapp.com/emotions.json",
+            parameters: param,
+            success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
+                print("JSON: " + responseObject.description)
+                
+            },
+            failure: { (operation: AFHTTPRequestOperation!,error: NSError!) in
+                print("Error: " + error.localizedDescription)
+                
+        })
+        
+    }
     
     func postComment(){
         let manager = AFHTTPRequestOperationManager()
 
-//        var comment_params = [ "comment":["user_id":current_user?.user_id,"artwork_id":cunrrent_artwork.artwork_id, "comment":content]]
-//        var param = ["comment":["user_id":"1","artwork_id":"1","comment":content] ]
         var param = ["user_id": NSNumber(integer: AppDelegate.current_user.user_id), "artwork_id" : NSNumber(integer: current_artwork.artwork_id), "comment" : content ];
-        manager.POST( "http://localhost:3000/comments.json",
+        manager.POST( "https://still-scrubland-2068.herokuapp.com/comments.json",
             parameters: param,
             success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
                 print("JSON: " + responseObject.description)

@@ -17,6 +17,7 @@ class EmotionCell: UITableViewCell
 
     @IBOutlet var emoName: UILabel!
 
+    @IBOutlet var emoQues: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
