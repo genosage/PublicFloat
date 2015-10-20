@@ -1,23 +1,22 @@
 //
-//  EmotionCell.swift
+//  CommentCell.swift
 //  PublicFloat
 //
-//  Created by Xing Hu on 15/9/17.
-//  Copyright (c) 2015年 YellowTeam. All rights reserved.
+//  Created by Xing Hu on 15/10/19.
+//  Copyright © 2015年 YellowTeam. All rights reserved.
 //
 
 import Foundation
-
 import UIKit
 
-class EmotionCell: UITableViewCell
+class CommentCell: UITableViewCell
 {
+    
+    @IBOutlet var commentContent: UILabel!
+    @IBOutlet var commentName: UILabel!
 
-    @IBOutlet var emoPic: UIImageView!
-
-    @IBOutlet var emoName: UILabel!
-
-    @IBOutlet var emoQues: UILabel!
+ 
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -7,14 +7,13 @@
 //
 
 import UIKit
-//import RxCocoa
-//import RxSwift
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    static let current_user = User()
+     static var current_user = User(user_id: 0, user_email: "")
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.

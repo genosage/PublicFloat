@@ -10,10 +10,10 @@ import Foundation
 import AFNetworking
 import UIKit
 
-class CommentView: UITableViewController{
+class CommentViewController: UITableViewController{
     
-    
-  
+    var users = [User]()
+   var emo = Emotion(id: 0,emotion_name: "",artwork_id: 0)
     var current_artwork = ArtWork(artwork_id:0, name: " ", imageUrl: " ", location: " ")
     var comments = [Comment]()
     var newC = Comment(comment_text: "",user_id:0,  comment_id:0, artwork_id: 0)
@@ -32,6 +32,13 @@ class CommentView: UITableViewController{
                     }
                 }
                 self.tableView.reloadData()
+            })
+            }, error: nil)
+        databody.fetchAllUsers({ (users) -> Void in
+            dispatch_async(dispatch_get_main_queue(), {
+                for user in users{
+                    self.users.append(user)
+                }
             })
             }, error: nil)
 
@@ -56,10 +63,16 @@ class CommentView: UITableViewController{
         cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         
-        let cell:UITableViewCell = UITableViewCell(style:UITableViewCellStyle.Default, reuseIdentifier:"cell")
-        
-        cell.textLabel?.text = comments[indexPath.row].comment_text
-        
+        let cell : CommentCell = tableView.dequeueReusableCellWithIdentifier("CCell") as! CommentCell
+        cell.commentName.text = "anonymous  Says:"
+        cell.commentContent.text = comments[indexPath.row].comment_text
+        for user in users{
+            if( comments[indexPath.row].user_id == user.user_id){
+                
+                print(user.user_email)
+                cell.commentName.text = user.user_email+"    Say:"
+            }
+        }
         
         return cell
     }
@@ -69,8 +82,10 @@ class CommentView: UITableViewController{
             let viewController = segue.destinationViewController as! InputViewController
             
             viewController.current_artwork = self.current_artwork
+            viewController.emo = self.emo
+            
         }
-
+        
         
     }
     

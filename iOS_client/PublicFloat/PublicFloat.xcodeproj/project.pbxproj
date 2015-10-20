@@ -11,7 +11,6 @@
 		18C7F1E31B84955300D8DF44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C7F1E21B84955300D8DF44 /* AppDelegate.swift */; };
 		18C7F1ED1B84955300D8DF44 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C7F1EB1B84955300D8DF44 /* LaunchScreen.xib */; };
 		18C7F1F91B84955300D8DF44 /* PublicFloatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C7F1F81B84955300D8DF44 /* PublicFloatTests.swift */; };
-		18D6004F1B9DAF3C007EE280 /* ArtWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D6004E1B9DAF3C007EE280 /* ArtWork.swift */; };
 		5FDEC63C480C933430220C6C /* Pods_PublicFloatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A956685C0083C5341E34F55B /* Pods_PublicFloatTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		7909F1081BB407230096C6F1 /* ArtworkListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7909F1041BB407230096C6F1 /* ArtworkListViewController.swift */; };
 		7909F1091BB407230096C6F1 /* EmotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7909F1051BB407230096C6F1 /* EmotionViewController.swift */; };
@@ -19,13 +18,21 @@
 		7909F1101BB4245B0096C6F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7909F10E1BB4245B0096C6F1 /* Main.storyboard */; };
 		7909F1141BB429CC0096C6F1 /* ArtworkDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7909F1131BB429CC0096C6F1 /* ArtworkDetailViewController.swift */; };
 		7909F1161BB440E90096C6F1 /* 2.pic_hd.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7909F1151BB440E90096C6F1 /* 2.pic_hd.jpg */; };
+		793694421BD638B9009C6425 /* ArtworkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793694411BD638B9009C6425 /* ArtworkCell.swift */; settings = {ASSET_TAGS = (); }; };
+		793694441BD6390D009C6425 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793694431BD6390D009C6425 /* CommentCell.swift */; settings = {ASSET_TAGS = (); }; };
+		793694461BD640F8009C6425 /* TestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793694451BD640F8009C6425 /* TestModel.swift */; settings = {ASSET_TAGS = (); }; };
+		793694471BD64108009C6425 /* ArtWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D6004E1B9DAF3C007EE280 /* ArtWork.swift */; settings = {ASSET_TAGS = (); }; };
+		793694481BD64108009C6425 /* ArtWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D6004E1B9DAF3C007EE280 /* ArtWork.swift */; settings = {ASSET_TAGS = (); }; };
+		793694491BD6410B009C6425 /* Emotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7951BE031BBB5E4800D34C69 /* Emotion.swift */; settings = {ASSET_TAGS = (); }; };
+		7936944A1BD6410E009C6425 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7951BE051BBB5F8700D34C69 /* Comment.swift */; settings = {ASSET_TAGS = (); }; };
+		7936944B1BD64111009C6425 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7951BE071BBB5FFE00D34C69 /* User.swift */; settings = {ASSET_TAGS = (); }; };
 		7951BE041BBB5E4800D34C69 /* Emotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7951BE031BBB5E4800D34C69 /* Emotion.swift */; };
 		7951BE061BBB5F8700D34C69 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7951BE051BBB5F8700D34C69 /* Comment.swift */; };
 		7951BE081BBB5FFE00D34C69 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7951BE071BBB5FFE00D34C69 /* User.swift */; };
 		7951BE0E1BBBD4B100D34C69 /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7951BE0D1BBBD4B100D34C69 /* InputViewController.swift */; };
 		795D684C1BCA65C100974F23 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 795D684B1BCA65C100974F23 /* Images.xcassets */; };
 		795DE8F21BC7655F00F02E82 /* GetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795DE8F11BC7655F00F02E82 /* GetData.swift */; };
-		7961CCDA1BCB076000771C96 /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7961CCD91BCB076000771C96 /* CommentView.swift */; };
+		7961CCDA1BCB076000771C96 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7961CCD91BCB076000771C96 /* CommentViewController.swift */; };
 		797AF8EA1BB45E36005C292A /* ArtworkMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797AF8E91BB45E36005C292A /* ArtworkMapViewController.swift */; };
 		797AF8EC1BB45EED005C292A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797AF8EB1BB45EED005C292A /* MapViewController.swift */; };
 		797AF8F01BB464B0005C292A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797AF8EF1BB464B0005C292A /* LoginViewController.swift */; };
@@ -67,13 +74,16 @@
 		7909F10F1BB4245B0096C6F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = PublicFloat/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7909F1131BB429CC0096C6F1 /* ArtworkDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArtworkDetailViewController.swift; path = PublicFloat/ArtworkDetailViewController.swift; sourceTree = "<group>"; };
 		7909F1151BB440E90096C6F1 /* 2.pic_hd.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.pic_hd.jpg; sourceTree = "<group>"; };
+		793694411BD638B9009C6425 /* ArtworkCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtworkCell.swift; sourceTree = "<group>"; };
+		793694431BD6390D009C6425 /* CommentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		793694451BD640F8009C6425 /* TestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestModel.swift; sourceTree = "<group>"; };
 		7951BE031BBB5E4800D34C69 /* Emotion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Emotion.swift; sourceTree = "<group>"; };
 		7951BE051BBB5F8700D34C69 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		7951BE071BBB5FFE00D34C69 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7951BE0D1BBBD4B100D34C69 /* InputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
 		795D684B1BCA65C100974F23 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = PublicFloat/Images.xcassets; sourceTree = "<group>"; };
 		795DE8F11BC7655F00F02E82 /* GetData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetData.swift; sourceTree = "<group>"; };
-		7961CCD91BCB076000771C96 /* CommentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
+		7961CCD91BCB076000771C96 /* CommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
 		797AF8E91BB45E36005C292A /* ArtworkMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArtworkMapViewController.swift; path = PublicFloat/ArtworkMapViewController.swift; sourceTree = "<group>"; };
 		797AF8EB1BB45EED005C292A /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = PublicFloat/MapViewController.swift; sourceTree = "<group>"; };
 		797AF8EF1BB464B0005C292A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = PublicFloat/LoginViewController.swift; sourceTree = "<group>"; };
@@ -166,6 +176,7 @@
 				18C7F1F81B84955300D8DF44 /* PublicFloatTests.swift */,
 				18C7F1F61B84955300D8DF44 /* Supporting Files */,
 				18D6005B1B9DE012007EE280 /* PublicFloatTestHeader.h */,
+				793694451BD640F8009C6425 /* TestModel.swift */,
 			);
 			path = PublicFloatTests;
 			sourceTree = "<group>";
@@ -219,8 +230,10 @@
 				795D684B1BCA65C100974F23 /* Images.xcassets */,
 				7909F1071BB407230096C6F1 /* EmotionCell.swift */,
 				7951BE0D1BBBD4B100D34C69 /* InputViewController.swift */,
-				7961CCD91BCB076000771C96 /* CommentView.swift */,
+				7961CCD91BCB076000771C96 /* CommentViewController.swift */,
 				7B0D002C1BD3786600EAF1CF /* TestBeaconViewController.swift */,
+				793694411BD638B9009C6425 /* ArtworkCell.swift */,
+				793694431BD6390D009C6425 /* CommentCell.swift */,
 			);
 			name = View;
 			path = ..;
@@ -439,17 +452,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				793694421BD638B9009C6425 /* ArtworkCell.swift in Sources */,
 				7B0D002D1BD3786600EAF1CF /* TestBeaconViewController.swift in Sources */,
-				7961CCDA1BCB076000771C96 /* CommentView.swift in Sources */,
+				7961CCDA1BCB076000771C96 /* CommentViewController.swift in Sources */,
 				7909F1091BB407230096C6F1 /* EmotionViewController.swift in Sources */,
 				7909F1141BB429CC0096C6F1 /* ArtworkDetailViewController.swift in Sources */,
+				793694441BD6390D009C6425 /* CommentCell.swift in Sources */,
 				7951BE081BBB5FFE00D34C69 /* User.swift in Sources */,
 				7951BE0E1BBBD4B100D34C69 /* InputViewController.swift in Sources */,
 				797AF8EA1BB45E36005C292A /* ArtworkMapViewController.swift in Sources */,
 				797AF8EC1BB45EED005C292A /* MapViewController.swift in Sources */,
+				793694481BD64108009C6425 /* ArtWork.swift in Sources */,
 				795DE8F21BC7655F00F02E82 /* GetData.swift in Sources */,
 				18C7F1E31B84955300D8DF44 /* AppDelegate.swift in Sources */,
-				18D6004F1B9DAF3C007EE280 /* ArtWork.swift in Sources */,
 				7951BE061BBB5F8700D34C69 /* Comment.swift in Sources */,
 				7909F1081BB407230096C6F1 /* ArtworkListViewController.swift in Sources */,
 				797AF8F01BB464B0005C292A /* LoginViewController.swift in Sources */,
@@ -462,8 +477,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				793694461BD640F8009C6425 /* TestModel.swift in Sources */,
+				7936944A1BD6410E009C6425 /* Comment.swift in Sources */,
+				793694491BD6410B009C6425 /* Emotion.swift in Sources */,
 				18C7F1F91B84955300D8DF44 /* PublicFloatTests.swift in Sources */,
+				793694471BD64108009C6425 /* ArtWork.swift in Sources */,
 				18934E781BAB130100657490 /* NSObject+AWStubAdditions.m in Sources */,
+				7936944B1BD64111009C6425 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
