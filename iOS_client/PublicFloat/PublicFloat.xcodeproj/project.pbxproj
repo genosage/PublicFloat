@@ -306,7 +306,7 @@
 				TargetAttributes = {
 					18C7F1DC1B84955300D8DF44 = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = 5XNHYC5VYW;
+						DevelopmentTeam = JGTV7NMB6E;
 					};
 					18C7F1F11B84955300D8DF44 = {
 						CreatedOnToolsVersion = 6.4;
@@ -620,7 +620,7 @@
 				INFOPLIST_FILE = PublicFloat/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = PublicFloat;
+				PRODUCT_BUNDLE_IDENTIFIER = "PublicFloat-Yellow";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "PublicFloat/PublicFloat-Bridging-Header.h";
@@ -648,7 +648,7 @@
 				INFOPLIST_FILE = PublicFloat/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = PublicFloat;
+				PRODUCT_BUNDLE_IDENTIFIER = "PublicFloat-Yellow";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "PublicFloat/PublicFloat-Bridging-Header.h";

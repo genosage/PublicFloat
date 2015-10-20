@@ -37,7 +37,7 @@ class LoginViewController : UIViewController,UITextFieldDelegate {
         
         let param = ["user" : ["user_email":email.text!] ]
         
-        manager.POST( "http://localhost:3000/users.json",
+        manager.POST( "https://still-scrubland-2068.herokuapp.com/users.json",
             parameters: param,
             success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
                 print("JSON: " + responseObject.description)

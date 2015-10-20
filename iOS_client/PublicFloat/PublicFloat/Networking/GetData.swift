@@ -19,7 +19,7 @@ class GetData{
     func fetchEmotions(successCallback: ([Emotion],[String]) -> Void, error: ((NSError?) -> Void)?) {
         
         let manager = AFHTTPRequestOperationManager()
-        manager.GET("http://localhost:3000/emotions.json", parameters: nil, success: { (operation ,responseObject) -> Void in
+        manager.GET("https://still-scrubland-2068.herokuapp.com/emotions.json", parameters: nil, success: { (operation ,responseObject) -> Void in
             let results = JSON(responseObject)
             var emotionNames:[String]=[]
             var emotions: [Emotion] = []
@@ -47,7 +47,7 @@ class GetData{
     
     func fetchAllUsers(successCallback: ([User]) -> Void, error: ((NSError?) -> Void)?) {
         let manager = AFHTTPRequestOperationManager()
-        manager.GET("http://localhost:3000/users.json", parameters: nil, success: { (operation ,responseObject) -> Void in
+        manager.GET("https://still-scrubland-2068.herokuapp.com/users.json", parameters: nil, success: { (operation ,responseObject) -> Void in
             let results = JSON(responseObject)
             
             var users:[User]=[]
@@ -73,7 +73,7 @@ class GetData{
     
     func fetchAllArtworks(successCallback: ([ArtWork]) -> Void, error: ((NSError?) -> Void)?) {
         let manager = AFHTTPRequestOperationManager()
-        manager.GET("http://localhost:3000/artworks.json", parameters: nil, success: { (operation ,responseObject) -> Void in
+        manager.GET("https://still-scrubland-2068.herokuapp.com/artworks.json", parameters: nil, success: { (operation ,responseObject) -> Void in
             let results = JSON(responseObject)
             var artworks: [ArtWork] = []
             for (key, subJson) in results {
@@ -102,7 +102,7 @@ class GetData{
     
     func fetchAllComments(successCallback: ([Comment]) -> Void, error: ((NSError?) -> Void)?) {
         let manager = AFHTTPRequestOperationManager()
-        manager.GET("http://localhost:3000/comments.json", parameters: nil, success: { (operation ,responseObject) -> Void in
+        manager.GET("https://still-scrubland-2068.herokuapp.com/comments.json", parameters: nil, success: { (operation ,responseObject) -> Void in
             let results = JSON(responseObject)
             var comments: [Comment] = []
             for (key, subJson) in results {

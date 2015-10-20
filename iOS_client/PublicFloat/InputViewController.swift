@@ -50,7 +50,7 @@ class InputViewController: UIViewController,UITextFieldDelegate{
         
         let param = ["emotion":["emotion_name": emotiwo, "artwork_id" : NSNumber(integer: current_artwork.artwork_id)]]
         
-        manager.POST( "http://localhost:3000/emotions.json",
+        manager.POST( "https://still-scrubland-2068.herokuapp.com/emotions.json",
             parameters: param,
             success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
                 print("JSON: " + responseObject.description)
@@ -67,7 +67,7 @@ class InputViewController: UIViewController,UITextFieldDelegate{
         let manager = AFHTTPRequestOperationManager()
 
         var param = ["user_id": NSNumber(integer: AppDelegate.current_user.user_id), "artwork_id" : NSNumber(integer: current_artwork.artwork_id), "comment" : content ];
-        manager.POST( "http://localhost:3000/comments.json",
+        manager.POST( "https://still-scrubland-2068.herokuapp.com/comments.json",
             parameters: param,
             success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
                 print("JSON: " + responseObject.description)
