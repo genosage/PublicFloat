@@ -16,7 +16,7 @@ import CoreData
 class GetData{
     
  
-    func fetchEmotions(successCallback: ([Emotion],[String]) -> Void, error: ((NSError?) -> Void)?) {
+    func fetchEmotions(_ successCallback: @escaping ([Emotion],[String]) -> Void, error: ((NSError?) -> Void)?) {
         
         let manager = AFHTTPRequestOperationManager()
         manager.GET("https://still-scrubland-2068.herokuapp.com/emotions.json", parameters: nil, success: { (operation ,responseObject) -> Void in
@@ -45,7 +45,7 @@ class GetData{
         })
     }
     
-    func fetchAllUsers(successCallback: ([User]) -> Void, error: ((NSError?) -> Void)?) {
+    func fetchAllUsers(_ successCallback: @escaping ([User]) -> Void, error: ((NSError?) -> Void)?) {
         let manager = AFHTTPRequestOperationManager()
         manager.GET("https://still-scrubland-2068.herokuapp.com/users.json", parameters: nil, success: { (operation ,responseObject) -> Void in
             let results = JSON(responseObject)
@@ -71,7 +71,7 @@ class GetData{
 
     
     
-    func fetchAllArtworks(successCallback: ([ArtWork]) -> Void, error: ((NSError?) -> Void)?) {
+    func fetchAllArtworks(_ successCallback: @escaping ([ArtWork]) -> Void, error: ((NSError?) -> Void)?) {
         let manager = AFHTTPRequestOperationManager()
         manager.GET("https://still-scrubland-2068.herokuapp.com/artworks.json", parameters: nil, success: { (operation ,responseObject) -> Void in
             let results = JSON(responseObject)
@@ -100,7 +100,7 @@ class GetData{
     }
     
     
-    func fetchAllComments(successCallback: ([Comment]) -> Void, error: ((NSError?) -> Void)?) {
+    func fetchAllComments(_ successCallback: @escaping ([Comment]) -> Void, error: ((NSError?) -> Void)?) {
         let manager = AFHTTPRequestOperationManager()
         manager.GET("https://still-scrubland-2068.herokuapp.com/comments.json", parameters: nil, success: { (operation ,responseObject) -> Void in
             let results = JSON(responseObject)

@@ -17,18 +17,18 @@ class TestBeaconViewController: UIViewController, UITableViewDataSource, UITable
     
     let beaconManager = ESTBeaconManager()
     let beaconRegion = CLBeaconRegion(
-        proximityUUID: NSUUID(UUIDString: "8492E75F-4FD6-469D-B132-043FE94921D8")!,
+        proximityUUID: UUID(uuidString: "8492E75F-4FD6-469D-B132-043FE94921D8")!,
         identifier: "ranged region")
     var beacon : [CLBeacon] = []
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.beaconManager.startRangingBeaconsInRegion(self.beaconRegion)
+        self.beaconManager.startRangingBeacons(in: self.beaconRegion)
     }
     
-    override func viewDidDisappear(animated: Bool) {
+    override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        self.beaconManager.stopRangingBeaconsInRegion(self.beaconRegion)
+        self.beaconManager.stopRangingBeacons(in: self.beaconRegion)
     }
     
     override func viewDidLoad() {
@@ -40,15 +40,15 @@ class TestBeaconViewController: UIViewController, UITableViewDataSource, UITable
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return beacon.count
     }
 
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
-        let cell = table.dequeueReusableCellWithIdentifier("beaconCell")! as UITableViewCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
+        let cell = table.dequeueReusableCell(withIdentifier: "beaconCell")! as UITableViewCell
         
-        var image = cell.viewWithTag(101) as! UIImageView
-        var title = cell.viewWithTag(102) as! UILabel
+        let image = cell.viewWithTag(101) as! UIImageView
+        let title = cell.viewWithTag(102) as! UILabel
         
         image.image = UIImage(named: artwork[indexPath.row].1)
         title.text = artwork[indexPath.row].0
@@ -57,7 +57,7 @@ class TestBeaconViewController: UIViewController, UITableViewDataSource, UITable
         
     }
     
-    func beaconManager(manager: AnyObject, didRangeBeacons beacons: [CLBeacon], inRegion region: CLBeaconRegion) {
+    func beaconManager(_ manager: AnyObject, didRangeBeacons beacons: [CLBeacon], in region: CLBeaconRegion) {
         beacon = beacons
         if beacons.count != 0{
             if Int((beacons.first!.major)) != artwork[0].2{
@@ -69,10 +69,10 @@ class TestBeaconViewController: UIViewController, UITableViewDataSource, UITable
         table.reloadData()
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "beaconDetail" {
             
-            if let destination = segue.destinationViewController as? ArtworkDetailViewController {
+            if let destination = segue.destination as? ArtworkDetailViewController {
                 let index = table.indexPathForSelectedRow?.row
                 if  index != nil{
                     destination.art.name = artwork[index!].0

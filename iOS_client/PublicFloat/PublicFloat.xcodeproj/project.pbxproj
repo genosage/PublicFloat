@@ -18,14 +18,14 @@
 		7909F1101BB4245B0096C6F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7909F10E1BB4245B0096C6F1 /* Main.storyboard */; };
 		7909F1141BB429CC0096C6F1 /* ArtworkDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7909F1131BB429CC0096C6F1 /* ArtworkDetailViewController.swift */; };
 		7909F1161BB440E90096C6F1 /* 2.pic_hd.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7909F1151BB440E90096C6F1 /* 2.pic_hd.jpg */; };
-		793694421BD638B9009C6425 /* ArtworkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793694411BD638B9009C6425 /* ArtworkCell.swift */; settings = {ASSET_TAGS = (); }; };
-		793694441BD6390D009C6425 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793694431BD6390D009C6425 /* CommentCell.swift */; settings = {ASSET_TAGS = (); }; };
-		793694461BD640F8009C6425 /* TestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793694451BD640F8009C6425 /* TestModel.swift */; settings = {ASSET_TAGS = (); }; };
-		793694471BD64108009C6425 /* ArtWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D6004E1B9DAF3C007EE280 /* ArtWork.swift */; settings = {ASSET_TAGS = (); }; };
-		793694481BD64108009C6425 /* ArtWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D6004E1B9DAF3C007EE280 /* ArtWork.swift */; settings = {ASSET_TAGS = (); }; };
-		793694491BD6410B009C6425 /* Emotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7951BE031BBB5E4800D34C69 /* Emotion.swift */; settings = {ASSET_TAGS = (); }; };
-		7936944A1BD6410E009C6425 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7951BE051BBB5F8700D34C69 /* Comment.swift */; settings = {ASSET_TAGS = (); }; };
-		7936944B1BD64111009C6425 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7951BE071BBB5FFE00D34C69 /* User.swift */; settings = {ASSET_TAGS = (); }; };
+		793694421BD638B9009C6425 /* ArtworkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793694411BD638B9009C6425 /* ArtworkCell.swift */; };
+		793694441BD6390D009C6425 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793694431BD6390D009C6425 /* CommentCell.swift */; };
+		793694461BD640F8009C6425 /* TestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793694451BD640F8009C6425 /* TestModel.swift */; };
+		793694471BD64108009C6425 /* ArtWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D6004E1B9DAF3C007EE280 /* ArtWork.swift */; };
+		793694481BD64108009C6425 /* ArtWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D6004E1B9DAF3C007EE280 /* ArtWork.swift */; };
+		793694491BD6410B009C6425 /* Emotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7951BE031BBB5E4800D34C69 /* Emotion.swift */; };
+		7936944A1BD6410E009C6425 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7951BE051BBB5F8700D34C69 /* Comment.swift */; };
+		7936944B1BD64111009C6425 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7951BE071BBB5FFE00D34C69 /* User.swift */; };
 		7951BE041BBB5E4800D34C69 /* Emotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7951BE031BBB5E4800D34C69 /* Emotion.swift */; };
 		7951BE061BBB5F8700D34C69 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7951BE051BBB5F8700D34C69 /* Comment.swift */; };
 		7951BE081BBB5FFE00D34C69 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7951BE071BBB5FFE00D34C69 /* User.swift */; };
@@ -36,8 +36,8 @@
 		797AF8EA1BB45E36005C292A /* ArtworkMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797AF8E91BB45E36005C292A /* ArtworkMapViewController.swift */; };
 		797AF8EC1BB45EED005C292A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797AF8EB1BB45EED005C292A /* MapViewController.swift */; };
 		797AF8F01BB464B0005C292A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797AF8EF1BB464B0005C292A /* LoginViewController.swift */; };
-		7B0D002D1BD3786600EAF1CF /* TestBeaconViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0D002C1BD3786600EAF1CF /* TestBeaconViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		7B0D00301BD3795E00EAF1CF /* EstimoteSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B0D002F1BD3795E00EAF1CF /* EstimoteSDK.framework */; settings = {ASSET_TAGS = (); }; };
+		7B0D002D1BD3786600EAF1CF /* TestBeaconViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0D002C1BD3786600EAF1CF /* TestBeaconViewController.swift */; };
+		7B0D00301BD3795E00EAF1CF /* EstimoteSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B0D002F1BD3795E00EAF1CF /* EstimoteSDK.framework */; };
 		BA42C625906CF704A66DA16A /* Pods_PublicFloat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40156B90B0C11FB5D2C48859 /* Pods_PublicFloat.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -307,9 +307,11 @@
 					18C7F1DC1B84955300D8DF44 = {
 						CreatedOnToolsVersion = 6.4;
 						DevelopmentTeam = 5XNHYC5VYW;
+						LastSwiftMigration = 0810;
 					};
 					18C7F1F11B84955300D8DF44 = {
 						CreatedOnToolsVersion = 6.4;
+						LastSwiftMigration = 0810;
 						TestTargetID = 18C7F1DC1B84955300D8DF44;
 					};
 				};
@@ -625,6 +627,7 @@
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "PublicFloat/PublicFloat-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -652,6 +655,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "PublicFloat/PublicFloat-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -674,6 +678,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "PublicFloatTests/PublicFloatTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PublicFloat.app/PublicFloat";
 			};
 			name = Debug;
@@ -692,6 +697,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "PublicFloatTests/PublicFloatTests-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PublicFloat.app/PublicFloat";
 			};
 			name = Release;

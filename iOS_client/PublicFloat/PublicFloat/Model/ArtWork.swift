@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class ArtWork: NSObject {
+open class ArtWork: NSObject {
     
     var artwork_id: Int = 0
     var name: String = ""

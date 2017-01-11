@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class Comment:NSObject {
+open class Comment:NSObject {
     
     var comment_id: Int = 0
     var artwork_id: Int = 0

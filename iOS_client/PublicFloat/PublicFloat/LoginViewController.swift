@@ -17,7 +17,7 @@ class LoginViewController : UIViewController,UITextFieldDelegate {
     
     var current_email = ""
     
-    @IBAction func LoginButtonPress(sender: UIButton) {
+    @IBAction func LoginButtonPress(_ sender: UIButton) {
         self.login()
     }
     
@@ -53,7 +53,7 @@ class LoginViewController : UIViewController,UITextFieldDelegate {
         current_email=self.email.text!
         if (emailValidate(current_email)==true){
             
-            self.performSegueWithIdentifier("userLoginSegue", sender: self)
+            self.performSegue(withIdentifier: "userLoginSegue", sender: self)
             
             postUser()
             
@@ -62,27 +62,27 @@ class LoginViewController : UIViewController,UITextFieldDelegate {
         }
     }
     
-    func emailValidate(emailtext:String) -> Bool{
+    func emailValidate(_ emailtext:String) -> Bool{
         
         let emailRegEx = "[A-Z0-9a-z]+@[A-Za-z0-9]+\\.[A-Za-z]{2,64}"
         
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-        return emailTest.evaluateWithObject(emailtext)
+        return emailTest.evaluate(with: emailtext)
     }
     
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "userLoginSegue"
         {
-            let viewController = segue.destinationViewController as! UINavigationController
+            let viewController = segue.destination as! UINavigationController
             
             let tableVC = viewController.viewControllers.first as! EmotionViewController
             
             tableVC.current_email = self.current_email
         }
         if segue.identifier == "Skip" {
-            let viewController = segue.destinationViewController as! UINavigationController
+            let viewController = segue.destination as! UINavigationController
             
             let tableVC = viewController.viewControllers.first as! EmotionViewController
             
@@ -93,18 +93,18 @@ class LoginViewController : UIViewController,UITextFieldDelegate {
     
     func showAlert()
     {
-        let alertController = UIAlertController(title: "Login Failed", message: nil, preferredStyle: .Alert)
-        alertController.addAction(UIAlertAction(title: "Dismiss", style: .Default, handler: nil))
+        let alertController = UIAlertController(title: "Login Failed", message: nil, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
         
-        self.presentViewController(alertController, animated: true, completion: nil)
+        self.present(alertController, animated: true, completion: nil)
     }
     
     //the function to control keyboard
-    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         email.resignFirstResponder()
     }
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
     {
         textField.resignFirstResponder()
         return true;

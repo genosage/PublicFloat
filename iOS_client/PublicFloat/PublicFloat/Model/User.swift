@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class User:NSObject {
+open class User:NSObject {
     
 
     var user_id: Int = 0

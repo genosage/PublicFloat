@@ -25,7 +25,7 @@ class ArtworkDetailViewController: UIViewController {
         
         imageView.image = UIImage(named:art.imageUrl)
         
-        descButt.setTitle(art.location, forState: .Normal)
+        descButt.setTitle(art.location, for: UIControlState())
         
         //descButt.titleLabel?.lineBreakMode = NSLineBreakMode.ByWordWrapping
         //commButt.setTitle("Comment", forState: .Normal)
@@ -38,9 +38,9 @@ class ArtworkDetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "tocomment" {
-            let viewController = segue.destinationViewController as! CommentViewController
+            let viewController = segue.destination as! CommentViewController
             
             viewController.current_artwork = self.art
              viewController.emo = self.emo
@@ -49,11 +49,11 @@ class ArtworkDetailViewController: UIViewController {
     }
 
     
-    @IBAction func shareTapped(sender: AnyObject) {
-        var controller: SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+    @IBAction func shareTapped(_ sender: AnyObject) {
+        let controller: SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
         controller.setInitialText(art.name)
-        controller.addImage(UIImage(named: art.imageUrl))
-        self.presentViewController(controller, animated: true, completion: nil)
+        controller.add(UIImage(named: art.imageUrl))
+        self.present(controller, animated: true, completion: nil)
     }
 
 }

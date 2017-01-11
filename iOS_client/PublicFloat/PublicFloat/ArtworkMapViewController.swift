@@ -22,27 +22,27 @@ class ArtworkMapViewController: UIViewController {
 override func viewDidLoad() {
     super.viewDidLoad()
     
-    let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: "tap:")
+    let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ArtworkMapViewController.tap(_:)))
     tapGestureRecognizer.numberOfTapsRequired = 2
     
-    let pinchGestureRecognizer = UIPinchGestureRecognizer(target: self, action: "pinch:")
+    let pinchGestureRecognizer = UIPinchGestureRecognizer(target: self, action: #selector(ArtworkMapViewController.pinch(_:)))
     
-    let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: "pan:")
+    let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(ArtworkMapViewController.pan(_:)))
     
-    let rotationGestureRecognizer = UIRotationGestureRecognizer(target: self, action: "rotation:")
+    let rotationGestureRecognizer = UIRotationGestureRecognizer(target: self, action: #selector(ArtworkMapViewController.rotation(_:)))
     
-    imageView = UIImageView(frame: CGRectMake(100, 200, 200, 200))
+    imageView = UIImageView(frame: CGRect(x: 100, y: 200, width: 200, height: 200))
     imageView.image = UIImage(named: "map")
     self.view.addSubview(imageView)
     
-    imageView.userInteractionEnabled = true
+    imageView.isUserInteractionEnabled = true
     imageView.addGestureRecognizer(tapGestureRecognizer)
     imageView.addGestureRecognizer(pinchGestureRecognizer)
     imageView.addGestureRecognizer(panGestureRecognizer)
     imageView.addGestureRecognizer(rotationGestureRecognizer)
 }
 
-func tap(gestureRecognizer:UITapGestureRecognizer){
+func tap(_ gestureRecognizer:UITapGestureRecognizer){
     
     var frame = imageView.frame
     
@@ -59,25 +59,25 @@ func tap(gestureRecognizer:UITapGestureRecognizer){
     imageView.frame = frame
 }
 
-func pinch(gestureRecognizer: UIPinchGestureRecognizer) {
-    if gestureRecognizer.state == UIGestureRecognizerState.Began || gestureRecognizer.state == UIGestureRecognizerState.Changed {
-        imageView.transform = CGAffineTransformScale(imageView.transform, gestureRecognizer.scale, gestureRecognizer.scale)
+func pinch(_ gestureRecognizer: UIPinchGestureRecognizer) {
+    if gestureRecognizer.state == UIGestureRecognizerState.began || gestureRecognizer.state == UIGestureRecognizerState.changed {
+        imageView.transform = imageView.transform.scaledBy(x: gestureRecognizer.scale, y: gestureRecognizer.scale)
         gestureRecognizer.scale = 1
     }
 }
 
-func pan(gestureRecognizer: UIPanGestureRecognizer) {
-    if gestureRecognizer.state == UIGestureRecognizerState.Began || gestureRecognizer.state == UIGestureRecognizerState.Changed {
-        let translation = gestureRecognizer.translationInView(imageView.superview!)
-        imageView.center = CGPointMake(imageView.center.x + translation.x, imageView.center.y + translation.y)
-        gestureRecognizer.setTranslation(CGPointZero, inView: imageView.superview)
+func pan(_ gestureRecognizer: UIPanGestureRecognizer) {
+    if gestureRecognizer.state == UIGestureRecognizerState.began || gestureRecognizer.state == UIGestureRecognizerState.changed {
+        let translation = gestureRecognizer.translation(in: imageView.superview!)
+        imageView.center = CGPoint(x: imageView.center.x + translation.x, y: imageView.center.y + translation.y)
+        gestureRecognizer.setTranslation(CGPoint.zero, in: imageView.superview)
     }
 }
 
 
-func rotation(gestureRecognizer: UIRotationGestureRecognizer) {
-    if gestureRecognizer.state == UIGestureRecognizerState.Began || gestureRecognizer.state == UIGestureRecognizerState.Changed {
-        imageView.transform = CGAffineTransformRotate(imageView.transform, gestureRecognizer.rotation)
+func rotation(_ gestureRecognizer: UIRotationGestureRecognizer) {
+    if gestureRecognizer.state == UIGestureRecognizerState.began || gestureRecognizer.state == UIGestureRecognizerState.changed {
+        imageView.transform = imageView.transform.rotated(by: gestureRecognizer.rotation)
         gestureRecognizer.rotation = 0
     }
 }

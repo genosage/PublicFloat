@@ -46,13 +46,13 @@ class EmotionViewController:  UITableViewController
         }
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         
         super.viewWillAppear(animated)
         
         
         databody.fetchEmotions({ (emotions,names) -> Void in
-            dispatch_async(dispatch_get_main_queue(), {
+            DispatchQueue.main.async(execute: {
                 
                 self.emotions = emotions
                 self.emoNames = names
@@ -65,7 +65,7 @@ class EmotionViewController:  UITableViewController
     func getCurrentUser(){
         
         databody.fetchAllUsers({ (users) -> Void in
-            dispatch_async(dispatch_get_main_queue(), {
+            DispatchQueue.main.async(execute: {
                 
                 for user in users{
                     
@@ -82,10 +82,10 @@ class EmotionViewController:  UITableViewController
     func showAlert()
     {
         // FIX ME: Current user could be nil.
-        let alertController = UIAlertController(title: "Welcome!\(AppDelegate.current_user.user_email)", message: nil, preferredStyle: .Alert)
-        alertController.addAction(UIAlertAction(title: "Dismiss", style: .Default, handler: nil))
+        let alertController = UIAlertController(title: "Welcome!\(AppDelegate.current_user.user_email)", message: nil, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
         
-        self.presentViewController(alertController, animated: true, completion: nil)
+        self.present(alertController, animated: true, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {
@@ -94,20 +94,20 @@ class EmotionViewController:  UITableViewController
     }
     
     
-   override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         //make sure you use the relevant array sizes
         return emotions.count
     }
     
-    override  func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    override  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        var cell : EmotionCell! = tableView.dequeueReusableCellWithIdentifier("ECell") as! EmotionCell
+        var cell : EmotionCell! = tableView.dequeueReusableCell(withIdentifier: "ECell") as! EmotionCell
         if(cell == nil)
         {
             //            cell = NSBundle.mainBundle().loadNibNamed("ECell", owner: self, options: nil)[0] as! EmotionCell;
             
-            cell = EmotionCell(style: UITableViewCellStyle.Default, reuseIdentifier: "emoCell")
+            cell = EmotionCell(style: UITableViewCellStyle.default, reuseIdentifier: "emoCell")
             
         }
         cell.emoQues.text = ""
@@ -119,9 +119,9 @@ class EmotionViewController:  UITableViewController
     }
     
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "artworkRelatedSegue" {
-            if let viewController = segue.destinationViewController as? UITabBarController {
+            if let viewController = segue.destination as? UITabBarController {
                 let tableVC = viewController.viewControllers!.first as! ArtworkListViewController
                 if let index = tableView.indexPathForSelectedRow?.row {
                     

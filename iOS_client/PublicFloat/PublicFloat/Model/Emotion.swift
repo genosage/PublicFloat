@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class Emotion: NSObject {
+open class Emotion: NSObject {
     
     var id: Int = 0
     var emotion_name: String = ""

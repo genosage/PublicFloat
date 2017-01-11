@@ -19,11 +19,11 @@ class CommentViewController: UITableViewController{
     var newC = Comment(comment_text: "",user_id:0,  comment_id:0, artwork_id: 0)
     
     
-    override func viewWillAppear(animated: Bool){
+    override func viewWillAppear(_ animated: Bool){
 
         databody.fetchAllComments({ (allcomment) -> Void in
-            dispatch_async(dispatch_get_main_queue(), {
-                self.comments.removeAll(keepCapacity: true)
+            DispatchQueue.main.async(execute: {
+                self.comments.removeAll(keepingCapacity: true)
                 for comment in allcomment{
                     print(comment.artwork_id)
                     if(comment.artwork_id == self.current_artwork.artwork_id){
@@ -35,7 +35,7 @@ class CommentViewController: UITableViewController{
             })
             }, error: nil)
         databody.fetchAllUsers({ (users) -> Void in
-            dispatch_async(dispatch_get_main_queue(), {
+            DispatchQueue.main.async(execute: {
                 for user in users{
                     self.users.append(user)
                 }
@@ -53,17 +53,17 @@ class CommentViewController: UITableViewController{
         // Dispose of any resources that can be recreated.
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return comments.count  //Currently Giving default Value
         
     }
     
-    override func tableView(tableView: UITableView,
-        cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    override func tableView(_ tableView: UITableView,
+        cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         
-        let cell : CommentCell = tableView.dequeueReusableCellWithIdentifier("CCell") as! CommentCell
+        let cell : CommentCell = tableView.dequeueReusableCell(withIdentifier: "CCell") as! CommentCell
         cell.commentName.text = "anonymous  Says:"
         cell.commentContent.text = comments[indexPath.row].comment_text
         for user in users{
@@ -77,9 +77,9 @@ class CommentViewController: UITableViewController{
         return cell
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "addInput" {
-            let viewController = segue.destinationViewController as! InputViewController
+            let viewController = segue.destination as! InputViewController
             
             viewController.current_artwork = self.current_artwork
             viewController.emo = self.emo

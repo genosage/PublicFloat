@@ -23,20 +23,20 @@ class InputViewController: UIViewController,UITextFieldDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         input_field.attributedPlaceholder =
-            NSAttributedString(string: "#\(emo.emotion_name)#", attributes:[NSForegroundColorAttributeName : UIColor.grayColor()])
+            NSAttributedString(string: "#\(emo.emotion_name)#", attributes:[NSForegroundColorAttributeName : UIColor.gray])
         
     }
     
-    @IBAction func addComment(sender: UIButton) {
+    @IBAction func addComment(_ sender: UIButton) {
         content = input_field.text!
         checkContent(content)
         postComment()
         
     }
     
-    func checkContent(content:String){
-        if(content.containsString("#")){
-            var c = content.componentsSeparatedByString("#")
+    func checkContent(_ content:String){
+        if(content.contains("#")){
+            var c = content.components(separatedBy: "#")
             
             if(c[1] != emo.emotion_name){
                 createRelateEmotion(c[1])
@@ -44,11 +44,11 @@ class InputViewController: UIViewController,UITextFieldDelegate{
         }
     }
     
-    func createRelateEmotion(emotiwo:String){
+    func createRelateEmotion(_ emotiwo:String){
         let manager = AFHTTPRequestOperationManager()
         //"emotion_name":"Curiosity","artwork_id":3
         
-        let param = ["emotion":["emotion_name": emotiwo, "artwork_id" : NSNumber(integer: current_artwork.artwork_id)]]
+        let param = ["emotion":["emotion_name": emotiwo, "artwork_id" : NSNumber(value: current_artwork.artwork_id as Int)]]
         
         manager.POST( "https://still-scrubland-2068.herokuapp.com/emotions.json",
             parameters: param,
@@ -66,7 +66,7 @@ class InputViewController: UIViewController,UITextFieldDelegate{
     func postComment(){
         let manager = AFHTTPRequestOperationManager()
 
-        var param = ["user_id": NSNumber(integer: AppDelegate.current_user.user_id), "artwork_id" : NSNumber(integer: current_artwork.artwork_id), "comment" : content ];
+        var param = ["user_id": NSNumber(value: AppDelegate.current_user.user_id as Int), "artwork_id" : NSNumber(value: current_artwork.artwork_id as Int), "comment" : content ] as [String : Any];
         manager.POST( "https://still-scrubland-2068.herokuapp.com/comments.json",
             parameters: param,
             success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in

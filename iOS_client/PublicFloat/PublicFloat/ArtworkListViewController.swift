@@ -29,12 +29,12 @@ class ArtworkListViewController: UITableViewController,UISearchBarDelegate, UISe
     }
     
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
     }
     
     func SelectArtwork(){
         databody.fetchAllArtworks({ (allartworks) -> Void in
-            dispatch_async(dispatch_get_main_queue(), {
+            DispatchQueue.main.async(execute: {
                 
                 for e in self.emotions{
                     if(e.emotion_name == self.emoBelong.emotion_name){
@@ -56,7 +56,7 @@ class ArtworkListViewController: UITableViewController,UISearchBarDelegate, UISe
         // Dispose of any resources that can be recreated.
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         if (is_searching == true){
             return filteredArtworks.count
@@ -65,9 +65,9 @@ class ArtworkListViewController: UITableViewController,UISearchBarDelegate, UISe
         }
     }
     
-    override  func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    override  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell : ArtwrokCell = tableView.dequeueReusableCellWithIdentifier("ACell") as! ArtwrokCell
+        let cell : ArtwrokCell = tableView.dequeueReusableCell(withIdentifier: "ACell") as! ArtwrokCell
         
         if(is_searching == false){
             let artwork = self.artworks[indexPath.row]
@@ -87,7 +87,7 @@ class ArtworkListViewController: UITableViewController,UISearchBarDelegate, UISe
     }
     
     
-    func searchBar(searchBar: UISearchBar, textDidChange searchText: String){
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String){
         if searchBar.text!.isEmpty{
             is_searching = false
             self.tableView.reloadData()
@@ -95,13 +95,13 @@ class ArtworkListViewController: UITableViewController,UISearchBarDelegate, UISe
             
             is_searching = true
             filteredArtworks = []
-            for var index = 0; index < artworks.count; index++
+            for index in 0 ..< artworks.count
             {
                 let artwork_id = artworks[index].artwork_id
-                var currentName = artworks[index].name
-                var currentimg = artworks[index].imageUrl
-                var currentDesc = artworks[index].location
-                if (currentName.lowercaseString.rangeOfString(searchText.lowercaseString)  != nil ){
+                let currentName = artworks[index].name
+                let currentimg = artworks[index].imageUrl
+                let currentDesc = artworks[index].location
+                if (currentName.lowercased().range(of: searchText.lowercased())  != nil ){
                     
                     filteredArtworks.append(ArtWork(artwork_id:artwork_id, name: currentName, imageUrl: currentimg, location: currentDesc))
                     
@@ -119,10 +119,10 @@ class ArtworkListViewController: UITableViewController,UISearchBarDelegate, UISe
     //        self.performSegueWithIdentifier("artworkdetail", sender: tableView)
     //    }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "artworkdetail" {
             
-            if let destination = segue.destinationViewController as? ArtworkDetailViewController {
+            if let destination = segue.destination as? ArtworkDetailViewController {
                 let index = tableView.indexPathForSelectedRow?.row
                 if  index != nil{
                     destination.art = artworks[index!]
