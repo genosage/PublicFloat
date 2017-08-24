@@ -25,32 +25,32 @@ class ViewController: UIViewController, CBPeripheralManagerDelegate {
     }
     
     func startImposter() {
-        let task = NSUUID()
+        let task = UUID()
         let beaconRegion = CLBeaconRegion(proximityUUID: task, major: 1, minor: 1, identifier: "com.unimelb.publicfloat.yellow")
         //CLBeaconRegion(proximityUUID: task, identifier: "com.unimelb.publicfloat.yellow")
-        let beaconPeripheraData = beaconRegion.peripheralDataWithMeasuredPower(nil)
+        let beaconPeripheraData = beaconRegion.peripheralData(withMeasuredPower: nil)
         peripheraManager = CBPeripheralManager(delegate:self, queue:nil, options:nil)
         let data = NSDictionary(dictionary: beaconPeripheraData)
         peripheraManager.startAdvertising((data as! [String : AnyObject]))
     }
     
-    func peripheralManagerDidUpdateState(peripheral: CBPeripheralManager) {
-        if (peripheral.state == CBPeripheralManagerState.PoweredOn) {
+    func peripheralManagerDidUpdateState(_ peripheral: CBPeripheralManager) {
+        if (peripheral.state == CBPeripheralManagerState.poweredOn) {
                 NSLog("Did update state power on.\n")
         }
-        else if (peripheral.state == CBPeripheralManagerState.PoweredOff) {
+        else if (peripheral.state == CBPeripheralManagerState.poweredOff) {
                  NSLog("Did update state power off.\n")
         }
-        else if(peripheral.state == CBPeripheralManagerState.Unauthorized) {
+        else if(peripheral.state == CBPeripheralManagerState.unauthorized) {
                  NSLog("Did update state unauthorized.\n")
         }
     }
     
-    func peripheralManager(peripheral: CBPeripheralManager, didReceiveReadRequest request: CBATTRequest) {
+    func peripheralManager(_ peripheral: CBPeripheralManager, didReceiveRead request: CBATTRequest) {
         NSLog("Did receive read request.\n")
     }
     
-    func peripheralManagerDidStartAdvertising(peripheral: CBPeripheralManager, error: NSError?) {
+    func peripheralManagerDidStartAdvertising(_ peripheral: CBPeripheralManager, error: Error?) {
         NSLog("Did start advertising.\n")
     }
 }

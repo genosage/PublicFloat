@@ -8,26 +8,26 @@
 
 import Foundation
 
-public class DateFormatterTransform: TransformType {
-	public typealias Object = NSDate
-	public typealias JSON = String
+open class DateFormatterTransform: TransformType {
+	open typealias Object = Date
+	open typealias JSON = String
 	
-	let dateFormatter: NSDateFormatter
+	let dateFormatter: DateFormatter
 	
-	public init(dateFormatter: NSDateFormatter) {
+	public init(dateFormatter: DateFormatter) {
 		self.dateFormatter = dateFormatter
 	}
 	
-	public func transformFromJSON(value: AnyObject?) -> NSDate? {
+	open func transformFromJSON(_ value: AnyObject?) -> Date? {
 		if let dateString = value as? String {
-			return dateFormatter.dateFromString(dateString)
+			return dateFormatter.date(from: dateString)
 		}
 		return nil
 	}
 	
-	public func transformToJSON(value: NSDate?) -> String? {
+	open func transformToJSON(_ value: Date?) -> String? {
 		if let date = value {
-			return dateFormatter.stringFromDate(date)
+			return dateFormatter.string(from: date)
 		}
 		return nil
 	}

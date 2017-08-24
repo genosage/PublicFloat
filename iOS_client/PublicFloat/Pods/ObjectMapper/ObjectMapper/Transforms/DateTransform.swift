@@ -8,20 +8,20 @@
 
 import Foundation
 
-public class DateTransform: TransformType {
-	public typealias Object = NSDate
-	public typealias JSON = Double
+open class DateTransform: TransformType {
+	open typealias Object = Date
+	open typealias JSON = Double
 
 	public init() {}
 
-	public func transformFromJSON(value: AnyObject?) -> NSDate? {
+	open func transformFromJSON(_ value: AnyObject?) -> Date? {
 		if let timeInt = value as? Double {
-			return NSDate(timeIntervalSince1970: NSTimeInterval(timeInt))
+			return Date(timeIntervalSince1970: TimeInterval(timeInt))
 		}
 		return nil
 	}
 
-	public func transformToJSON(value: NSDate?) -> Double? {
+	open func transformToJSON(_ value: Date?) -> Double? {
 		if let date = value {
 			return Double(date.timeIntervalSince1970)
 		}

@@ -18,7 +18,7 @@ public final class Map {
 	var keyIsNested = false
 	
 	/// Counter for failing cases of deserializing values to `let` properties.
-	private var failedCount: Int = 0
+	fileprivate var failedCount: Int = 0
 	
 	public init(mappingType: MappingType, JSONDictionary: [String : AnyObject]) {
 		self.mappingType = mappingType
@@ -42,7 +42,7 @@ public final class Map {
 			currentValue = JSONDictionary[key]
 		} else {
 			// break down the components of the key that are separated by .
-			currentValue = valueFor(ArraySlice(key.componentsSeparatedByString(".")), dictionary: JSONDictionary)
+			currentValue = valueFor(ArraySlice(key.components(separatedBy: ".")), dictionary: JSONDictionary)
 		}
 		
 		return self
@@ -54,7 +54,7 @@ public final class Map {
 		return currentValue as? T
 	}
 	
-	public func valueOr<T>(@autoclosure defaultValue: () -> T) -> T {
+	public func valueOr<T>(@autoclosure _ defaultValue: () -> T) -> T {
 		return value() ?? defaultValue()
 	}
 	
@@ -68,9 +68,9 @@ public final class Map {
 			failedCount++
 			
 			// Returns dummy memory as a proxy for type `T`
-			let pointer = UnsafeMutablePointer<T>.alloc(0)
-			pointer.dealloc(0)
-			return pointer.memory
+			let pointer = UnsafeMutablePointer<T>.allocate(capacity: 0)
+			pointer.deallocateCapacity(0)
+			return pointer.pointee
 		}
 	}
 	
@@ -81,7 +81,7 @@ public final class Map {
 }
 
 /// Fetch value from JSON dictionary, loop through them until we reach the desired object.
-private func valueFor(keyPathComponents: ArraySlice<String>, dictionary: [String : AnyObject]) -> AnyObject? {
+private func valueFor(_ keyPathComponents: ArraySlice<String>, dictionary: [String : AnyObject]) -> AnyObject? {
 	// Implement it as a tail recursive function.
 	
 	if keyPathComponents.isEmpty {
